@@ -120,3 +120,49 @@ header {
         }
     }
 }
+
+@media only screen and (min-width: 1024px) {
+    .mobile-header {
+        display: none;
+    }
+    header {
+        width: 30%;
+        height: 100vh;
+        padding: 0;
+        grid-template-rows: 2fr 2fr 5fr;
+        background-color: $primaryColor;
+        border-radius: 0;
+        >img {
+            position: static;
+            height: 10vw;
+        }
+        #tel {
+            position: static;
+            font-size: 1.6rem;
+            background-color: $cardBgColor;
+            padding: 1vw 2vw;
+            border-radius: 2vw;
+        }
+        .nav-menu {
+            display: grid;
+            a {
+                color: $cardBgColor;
+                font-size: 1.5rem;
+                line-height: 5vw;
+                &:hover {
+                    background-color: $cardBgColor;
+                    color: $primaryColor;
+                }
+            }
+            .nav-menu-dropdown {
+                label {
+                    left: 10vw;
+                    top: -2.5vw;
+                    &::before {
+                        color: $cardBgColor;
+                    }
+                }
+            }
+        }
+    }
+}

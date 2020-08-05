@@ -185,6 +185,52 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
   display: grid;
 }
 
+@media only screen and (min-width: 1024px) {
+  .mobile-header {
+    display: none;
+  }
+  header {
+    width: 30%;
+    height: 100vh;
+    padding: 0;
+    -ms-grid-rows: 2fr 2fr 5fr;
+        grid-template-rows: 2fr 2fr 5fr;
+    background-color: #FFA00D;
+    border-radius: 0;
+  }
+  header > img {
+    position: static;
+    height: 10vw;
+  }
+  header #tel {
+    position: static;
+    font-size: 1.6rem;
+    background-color: #ffffff;
+    padding: 1vw 2vw;
+    border-radius: 2vw;
+  }
+  header .nav-menu {
+    display: -ms-grid;
+    display: grid;
+  }
+  header .nav-menu a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    line-height: 5vw;
+  }
+  header .nav-menu a:hover {
+    background-color: #ffffff;
+    color: #FFA00D;
+  }
+  header .nav-menu .nav-menu-dropdown label {
+    left: 10vw;
+    top: -2.5vw;
+  }
+  header .nav-menu .nav-menu-dropdown label::before {
+    color: #ffffff;
+  }
+}
+
 /*mobile-homepagePhoto-start*/
 @-webkit-keyframes mobilephoto {
   25% {
