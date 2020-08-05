@@ -201,7 +201,7 @@ a {
 /*mobile-contact-end*/
 
 @import './footer';
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 450px) {
     .mobilePhoto {
         display: none;
     }
@@ -307,6 +307,48 @@ a {
                     font-size: 2vw;
                     line-height: 3vw;
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    .right {
+        width: 80%;
+        left: 20%;
+    }
+    #homeMenu {
+        .menu-section {
+            width: 90%;
+            grid-template-columns: 1fr 1fr 1fr;
+            .foodCard {
+                width: 70%;
+                height: 14vw;
+                grid-template-rows: 1.5fr 1fr;
+                img {
+                    height: 100%;
+                }
+                div {
+                    margin-top: 1vw;
+                    h2,
+                    h3 {
+                        font-size: $desktopMenuFontSize;
+                    }
+                    .description {
+                        font-size: $desktopMenuFontSize;
+                    }
+                }
+            }
+        }
+    }
+    #contact-text {
+        h2 {
+            font-size: $desktopMenuFontSize;
+        }
+        p {
+            a,
+            span {
+                font-size: $desktopMenuFontSize;
             }
         }
     }

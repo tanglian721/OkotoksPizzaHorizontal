@@ -189,7 +189,7 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
   display: grid;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 450px) {
   .mobile-header {
     display: none;
   }
@@ -210,7 +210,7 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
   }
   header #tel {
     position: static;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     background-color: #ffffff;
     padding: 1vw 2vw;
     border-radius: 2vw;
@@ -221,7 +221,7 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
   }
   header .nav-menu a {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 5vw;
   }
   header .nav-menu a:hover {
@@ -234,6 +234,35 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
   }
   header .nav-menu .nav-menu-dropdown label::before {
     color: #ffffff;
+  }
+  header .nav-menu .nav-menu-dropdown a:hover ~ #nav-menu-dropdown-icon::before {
+    color: #FFA00D;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  header {
+    width: 20%;
+  }
+  header > img {
+    height: 10vh;
+  }
+  header #tel {
+    font-size: 1.2vw;
+    padding: 0.5vw 1vw;
+  }
+  header #tel:hover {
+    font-size: 1.3vw;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  header .nav-menu a {
+    font-size: 1.2vw;
+    line-height: 3vw;
+  }
+  header .nav-menu .nav-menu-dropdown label {
+    left: 5vw;
+    top: -1.5vw;
   }
 }
 
@@ -537,7 +566,7 @@ footer #footer-bottom {
   line-height: 6vw;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 450px) {
   footer {
     border-radius: 0;
     width: 100%;
@@ -556,7 +585,7 @@ footer #footer-bottom {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 450px) {
   .mobilePhoto {
     display: none;
   }
@@ -680,6 +709,44 @@ footer #footer-bottom {
   #contact #contact-text p span {
     font-size: 2vw;
     line-height: 3vw;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .right {
+    width: 80%;
+    left: 20%;
+  }
+  #homeMenu .menu-section {
+    width: 90%;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  #homeMenu .menu-section .foodCard {
+    width: 70%;
+    height: 14vw;
+    -ms-grid-rows: 1.5fr 1fr;
+        grid-template-rows: 1.5fr 1fr;
+  }
+  #homeMenu .menu-section .foodCard img {
+    height: 100%;
+  }
+  #homeMenu .menu-section .foodCard div {
+    margin-top: 1vw;
+  }
+  #homeMenu .menu-section .foodCard div h2,
+  #homeMenu .menu-section .foodCard div h3 {
+    font-size: 1.2vw;
+  }
+  #homeMenu .menu-section .foodCard div .description {
+    font-size: 1.2vw;
+  }
+  #contact-text h2 {
+    font-size: 1.2vw;
+  }
+  #contact-text p a,
+  #contact-text p span {
+    font-size: 1.2vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
