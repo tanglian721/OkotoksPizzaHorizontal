@@ -22,7 +22,7 @@
 }
 
 @mixin pageShadow($blur) {
-    box-shadow: 0 0 $blur 0 rgb(56, 56, 56);
+    box-shadow: 0 1px $blur 0 rgb(56, 56, 56);
 }
 
 @mixin textShadow($Fblur) {

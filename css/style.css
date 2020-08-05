@@ -20,6 +20,10 @@ a {
   height: 5vh;
 }
 
+.tablet-body {
+  display: none;
+}
+
 header {
   z-index: 20;
   display: -ms-grid;
@@ -190,6 +194,8 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
     display: none;
   }
   header {
+    position: fixed;
+    top: 0;
     width: 30%;
     height: 100vh;
     padding: 0;
@@ -336,8 +342,8 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
   height: 30vw;
   width: 100%;
   border-radius: 18px;
-  -webkit-box-shadow: 0 0 2px 0 #383838;
-          box-shadow: 0 0 2px 0 #383838;
+  -webkit-box-shadow: 0 1px 2px 0 #383838;
+          box-shadow: 0 1px 2px 0 #383838;
 }
 
 #homeMenu .menu-section .foodCard:hover {
@@ -345,8 +351,8 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
 }
 
 #homeMenu .menu-section .foodCard:active {
-  -webkit-box-shadow: 0 0 0px 0 #383838;
-          box-shadow: 0 0 0px 0 #383838;
+  -webkit-box-shadow: 0 1px 0px 0 #383838;
+          box-shadow: 0 1px 0px 0 #383838;
 }
 
 #homeMenu .menu-section .foodCard img {
@@ -355,7 +361,6 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
   border-radius: 18px;
   -o-object-fit: cover;
      object-fit: cover;
-  float: left;
 }
 
 #homeMenu .menu-section .foodCard div {
@@ -530,5 +535,110 @@ footer #footer-bottom {
   color: black;
   font-size: 3vw;
   line-height: 6vw;
+}
+
+@media only screen and (min-width: 1024px) {
+  .mobilePhoto {
+    display: none;
+  }
+  .tablet-body {
+    display: block;
+  }
+  .right {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    position: relative;
+    width: 70%;
+    left: 30%;
+    overflow: hidden;
+  }
+  .homepagePhoto {
+    width: 100%;
+  }
+  .homepagePhoto .tabletPhotoFrame {
+    width: 100%;
+    height: 50vw;
+    overflow: hidden;
+  }
+  /*tablet-homemenu-start*/
+  #homeMenu {
+    width: 100%;
+  }
+  #homeMenu h1 {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #383838;
+    font-size: 2rem;
+    margin-left: 5vw;
+    margin-bottom: 0;
+  }
+  #homeMenu .menu-section {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    width: 95%;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  #homeMenu .menu-section .foodCard {
+    width: 90%;
+    height: 20vw;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 3fr 1fr;
+        grid-template-rows: 3fr 1fr;
+    row-gap: 0;
+    border-radius: 30px 0;
+  }
+  #homeMenu .menu-section .foodCard img {
+    width: 100%;
+    height: 14vw;
+    border-radius: 30px 0 0 0;
+  }
+  #homeMenu .menu-section .foodCard div {
+    position: relative;
+    width: 100%;
+    height: 4vw;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  #homeMenu .menu-section .foodCard div h2,
+  #homeMenu .menu-section .foodCard div h3 {
+    z-index: 10;
+    font-size: 1.5vw;
+  }
+  #homeMenu .menu-section .foodCard:hover .description {
+    top: 2vw;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  #homeMenu .menu-section .foodCard .description {
+    z-index: 5;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 10vw;
+    padding: 4vw 1vw;
+    position: absolute;
+    font-size: 1.5vw;
+    background-color: #ffffff;
+    width: 100%;
+    top: -2vw;
+    border-radius: 0 0 30px 0;
+    opacity: 0;
+    -webkit-box-shadow: 0 1px 2px 0 #383838;
+            box-shadow: 0 1px 2px 0 #383838;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -20,6 +20,10 @@ a {
     height: 5vh;
 }
 
+.tablet-body {
+    display: none;
+}
+
 @import './header';
 
 /*mobile-homepagePhoto-start*/
@@ -97,7 +101,6 @@ a {
                 height: 23vw;
                 border-radius: 18px;
                 object-fit: cover;
-                float: left;
             }
             div {
                 @include gridCenter;
@@ -199,3 +202,87 @@ a {
 /*mobile-contact-end*/
 
 @import './footer';
+@media only screen and (min-width: 1024px) {
+    .mobilePhoto {
+        display: none;
+    }
+    .tablet-body {
+        display: block;
+    }
+    .right {
+        @include gridCenter;
+        position: relative;
+        width: 70%;
+        left: 30%;
+        overflow: hidden;
+    }
+    .homepagePhoto {
+        width: 100%;
+        .tabletPhotoFrame {
+            width: 100%;
+            height: 50vw;
+            overflow: hidden;
+        }
+    }
+    /*tablet-homemenu-start*/
+    #homeMenu {
+        width: 100%;
+        h1 {
+            color: $cardBgColor;
+            @include textShadow(2px);
+            font-size: 2rem;
+            margin-left: 5vw;
+            margin-bottom: 0;
+        }
+        .menu-section {
+            @include gridCenter;
+            width: 95%;
+            grid-template-columns: 1fr 1fr 1fr;
+            .foodCard {
+                width: 90%;
+                height: 20vw;
+                display: grid;
+                align-items: start;
+                grid-template-columns: 1fr;
+                grid-template-rows: 3fr 1fr;
+                row-gap: 0;
+                border-radius: 30px 0;
+                img {
+                    width: 100%;
+                    height: 14vw;
+                    border-radius: 30px 0 0 0;
+                }
+                div {
+                    position: relative;
+                    width: 100%;
+                    height: 4vw;
+                    grid-template-rows: 1fr 1fr;
+                    h2,
+                    h3 {
+                        z-index: 10;
+                        font-size: 1.5vw;
+                    }
+                }
+                &:hover .description {
+                    top: 2vw;
+                    opacity: 1;
+                    transition: all 0.3s ease-out;
+                }
+                .description {
+                    z-index: 5;
+                    box-sizing: border-box;
+                    height: 10vw;
+                    padding: 4vw 1vw;
+                    position: absolute;
+                    font-size: 1.5vw;
+                    background-color: $cardBgColor;
+                    width: 100%;
+                    top: -2vw;
+                    border-radius: 0 0 30px 0;
+                    opacity: 0;
+                    @include pageShadow(2px);
+                }
+            }
+        }
+    }
+}
