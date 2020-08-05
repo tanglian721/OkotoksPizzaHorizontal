@@ -538,6 +538,25 @@ footer #footer-bottom {
 }
 
 @media only screen and (min-width: 1024px) {
+  footer {
+    border-radius: 0;
+    width: 100%;
+  }
+  footer #footer-top {
+    width: 100%;
+  }
+  footer #footer-top div p,
+  footer #footer-top div a {
+    font-size: 1.5vw;
+    line-height: 2vw;
+  }
+  footer #footer-bottom {
+    font-size: 1.5vw;
+    line-height: 2vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
   .mobilePhoto {
     display: none;
   }
@@ -616,6 +635,7 @@ footer #footer-bottom {
   #homeMenu .menu-section .foodCard div h2,
   #homeMenu .menu-section .foodCard div h3 {
     z-index: 10;
+    padding: 0 1vw;
     font-size: 1.5vw;
   }
   #homeMenu .menu-section .foodCard:hover .description {
