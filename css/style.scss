@@ -141,3 +141,44 @@ header {
         }
     }
 }
+
+
+/*mobile-header-end*/
+
+
+/*mobile-homepagePhoto-start*/
+
+@keyframes mobilephoto {
+    25% {
+        left: -70vw;
+    }
+    50% {
+        left: -140vw;
+    }
+    75% {
+        left: -210vw;
+    }
+    100% {
+        left: 0vw;
+    }
+}
+
+.homepagePhoto {
+    @include gridCenter;
+    width: 100%;
+    .mobilePhotoFrame {
+        margin-top: 5vw;
+        width: 70vw;
+        height: 84vw;
+        overflow: hidden;
+        object-fit: cover;
+        border-radius: 20px;
+        border: 1px solid white;
+        .mobilePhoto {
+            position: relative;
+            height: 84vw;
+            left: 0;
+            animation: mobilephoto 8s cubic-bezier(1, 0, 0.1, 0) infinite;
+        }
+    }
+}

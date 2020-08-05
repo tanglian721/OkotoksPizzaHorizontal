@@ -181,4 +181,64 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
   display: -ms-grid;
   display: grid;
 }
+
+/*mobile-header-end*/
+/*mobile-homepagePhoto-start*/
+@-webkit-keyframes mobilephoto {
+  25% {
+    left: -70vw;
+  }
+  50% {
+    left: -140vw;
+  }
+  75% {
+    left: -210vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+@keyframes mobilephoto {
+  25% {
+    left: -70vw;
+  }
+  50% {
+    left: -140vw;
+  }
+  75% {
+    left: -210vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+
+.homepagePhoto {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.homepagePhoto .mobilePhotoFrame {
+  margin-top: 5vw;
+  width: 70vw;
+  height: 84vw;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
+.homepagePhoto .mobilePhotoFrame .mobilePhoto {
+  position: relative;
+  height: 84vw;
+  left: 0;
+  -webkit-animation: mobilephoto 8s cubic-bezier(1, 0, 0.1, 0) infinite;
+          animation: mobilephoto 8s cubic-bezier(1, 0, 0.1, 0) infinite;
+}
 /*# sourceMappingURL=style.css.map */
