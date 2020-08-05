@@ -20,7 +20,6 @@ a {
   height: 5vh;
 }
 
-/*mobile-header-start*/
 header {
   z-index: 20;
   display: -ms-grid;
@@ -186,7 +185,6 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
   display: grid;
 }
 
-/*mobile-header-end*/
 /*mobile-homepagePhoto-start*/
 @-webkit-keyframes mobilephoto {
   25% {
