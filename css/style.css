@@ -434,4 +434,57 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
   line-height: 5vw;
   width: 40vw;
 }
+
+/*mobile-contact-end*/
+.splitter-line {
+  width: 100%;
+  height: 0.5px;
+  background-color: black;
+}
+
+footer {
+  position: relative;
+  z-index: 10;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  background-color: #ffffff;
+  border-radius: 20px 20px 0 0;
+}
+
+footer #footer-top {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 1vw 0 2px 0;
+}
+
+footer #footer-top div {
+  text-align: center;
+}
+
+footer #footer-top div p,
+footer #footer-top div a {
+  text-decoration: none;
+  font-family: 'Amiri', serif;
+  color: black;
+  font-size: 3vw;
+  line-height: 4vw;
+}
+
+footer #footer-bottom {
+  text-decoration: none;
+  font-family: 'Amiri', serif;
+  color: black;
+  font-size: 3vw;
+  line-height: 6vw;
+}
 /*# sourceMappingURL=style.css.map */

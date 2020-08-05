@@ -322,3 +322,43 @@ header {
         }
     }
 }
+
+
+/*mobile-contact-end*/
+
+.splitter-line {
+    width: 100%;
+    height: 0.5px;
+    background-color: black;
+}
+
+footer {
+    position: relative;
+    z-index: 10;
+    @include gridCenter;
+    background-color: $cardBgColor;
+    border-radius: 20px 20px 0 0;
+    #footer-top {
+        @include gridCenter;
+        grid-template-columns: 1fr 1fr;
+        padding: 1vw 0 2px 0;
+        div {
+            text-align: center;
+            p,
+            a {
+                text-decoration: none;
+                @include otherFont;
+                color: black;
+                font-size: 3vw;
+                line-height: 4vw;
+            }
+        }
+    }
+    #footer-bottom {
+        text-decoration: none;
+        @include otherFont;
+        color: black;
+        font-size: 3vw;
+        line-height: 6vw;
+    }
+}
