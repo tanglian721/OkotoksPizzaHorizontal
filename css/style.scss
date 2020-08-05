@@ -259,3 +259,66 @@ header {
 
 
 /*mobile-homeMenu-start*/
+
+
+/*mobile-contact-start*/
+
+#contact {
+    z-index: 1;
+    @include gridCenter;
+    width: 100%;
+    row-gap: 5vh;
+    padding-top: 5vh;
+    #map {
+        width: 80%;
+        height: 70vw;
+        h1 {
+            @include otherFont;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+        iframe {
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        a {
+            text-decoration: none;
+            @include otherFont;
+            color: black;
+            font-size: 12px;
+        }
+    }
+    #contact-text {
+        z-index: 1;
+        position: relative;
+        top: 12px;
+        background: rgba(196, 196, 196, 0.2);
+        padding: 3vh 0;
+        width: 100%;
+        height: auto;
+        @include gridCenter;
+        grid-template-columns: 1fr 1.2fr;
+        h2 {
+            @include otherFont;
+            color: black;
+            text-transform: uppercase;
+            font-size: 4vw;
+            margin-left: 9vw;
+        }
+        p {
+            display: grid;
+            justify-self: left;
+            a,
+            span {
+                text-decoration: none;
+                @include otherFont;
+                color: black;
+                font-size: 3vw;
+                line-height: 5vw;
+                width: 40vw;
+            }
+        }
+    }
+}
