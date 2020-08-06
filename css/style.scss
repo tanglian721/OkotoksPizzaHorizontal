@@ -213,7 +213,7 @@ a {
         position: relative;
         width: 70%;
         left: 30%;
-        overflow: hidden;
+        // overflow: hidden;
     }
     .homepagePhoto {
         width: 100%;
@@ -223,6 +223,7 @@ a {
             overflow: hidden;
             img {
                 width: 100%;
+                object-fit: cover;
             }
         }
     }
@@ -241,7 +242,7 @@ a {
             width: 95%;
             grid-template-columns: 1fr 1fr 1fr;
             .foodCard {
-                width: 90%;
+                width: 80%;
                 height: 20vw;
                 display: grid;
                 align-items: start;
@@ -263,7 +264,7 @@ a {
                     h3 {
                         z-index: 10;
                         padding: 0 1vw;
-                        font-size: 1.5vw;
+                        font-size: $desktopMenuFontSize;
                     }
                 }
                 &:hover .description {
@@ -277,7 +278,7 @@ a {
                     height: 10vw;
                     padding: 4vw 1vw;
                     position: absolute;
-                    font-size: 1.5vw;
+                    font-size: $desktopMenuFontSize;
                     background-color: $cardBgColor;
                     width: 100%;
                     top: -2vw;
@@ -302,12 +303,12 @@ a {
         #contact-text {
             h2 {
                 margin-left: 0;
-                font-size: 2vw;
+                font-size: 1.2rem;
             }
             p {
                 a,
                 span {
-                    font-size: 2vw;
+                    font-size: 1rem;
                     line-height: 3vw;
                 }
             }
@@ -315,7 +316,7 @@ a {
     }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1367px) {
     .right {
         width: 80%;
         left: 20%;

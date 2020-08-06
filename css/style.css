@@ -240,7 +240,7 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1367px) {
   header {
     width: 20%;
   }
@@ -602,7 +602,6 @@ footer #footer-bottom {
     position: relative;
     width: 70%;
     left: 30%;
-    overflow: hidden;
   }
   .homepagePhoto {
     width: 100%;
@@ -614,6 +613,8 @@ footer #footer-bottom {
   }
   .homepagePhoto .tabletPhotoFrame img {
     width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   /*tablet-homemenu-start*/
   #homeMenu {
@@ -638,7 +639,7 @@ footer #footer-bottom {
         grid-template-columns: 1fr 1fr 1fr;
   }
   #homeMenu .menu-section .foodCard {
-    width: 90%;
+    width: 80%;
     height: 20vw;
     display: -ms-grid;
     display: grid;
@@ -668,7 +669,7 @@ footer #footer-bottom {
   #homeMenu .menu-section .foodCard div h3 {
     z-index: 10;
     padding: 0 1vw;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
   }
   #homeMenu .menu-section .foodCard:hover .description {
     top: 2vw;
@@ -683,7 +684,7 @@ footer #footer-bottom {
     height: 10vw;
     padding: 4vw 1vw;
     position: absolute;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     background-color: #ffffff;
     width: 100%;
     top: -2vw;
@@ -706,16 +707,16 @@ footer #footer-bottom {
   }
   #contact #contact-text h2 {
     margin-left: 0;
-    font-size: 2vw;
+    font-size: 1.2rem;
   }
   #contact #contact-text p a,
   #contact #contact-text p span {
-    font-size: 2vw;
+    font-size: 1rem;
     line-height: 3vw;
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1367px) {
   .right {
     width: 80%;
     left: 20%;
