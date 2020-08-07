@@ -280,6 +280,7 @@ header {
           align-items: center;
   justify-items: center;
   row-gap: 5vh;
+  margin-bottom: 5vh;
 }
 
 #homeMenu h1 {
@@ -289,8 +290,29 @@ header {
   -ms-grid-column-align: left;
       justify-self: left;
   padding: 1vw 6vw 1vw 3vw;
+  color: #ffffff;
+  line-height: 10vw;
+  text-shadow: 1px 1px 1px #383838;
   background-color: #FFA00D;
   border-radius: 0 1.5rem 1.5rem 0;
+}
+
+#homeMenu #pizza {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 22vw;
+}
+
+#homeMenu #slides {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 32vw;
+}
+
+#homeMenu #desserts {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 42vw;
 }
 
 #homeMenu .menu-section {
