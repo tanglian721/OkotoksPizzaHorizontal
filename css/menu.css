@@ -398,6 +398,114 @@ header {
   font-size: 3vw;
 }
 
+@media only screen and (min-width: 450px) {
+  .tablet-body {
+    display: block;
+  }
+  .right {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    position: relative;
+    width: 70%;
+    left: 30%;
+  }
+  #homeMenu {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  #homeMenu h1 {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #383838;
+    font-size: 2rem;
+    line-height: 2vw;
+  }
+  #homeMenu #pizza {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0vw;
+  }
+  #homeMenu #slides {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2vw;
+  }
+  #homeMenu #desserts {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4vw;
+  }
+  #homeMenu .menu-section {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    width: 95%;
+    -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  #homeMenu .menu-section .foodCard {
+    width: 80%;
+    height: 16vw;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 5fr 2fr;
+        grid-template-rows: 5fr 2fr;
+    row-gap: 0;
+    border-radius: 30px 0;
+  }
+  #homeMenu .menu-section .foodCard img {
+    width: 100%;
+    height: 10vw;
+    border-radius: 30px 0 0 0;
+  }
+  #homeMenu .menu-section .foodCard div {
+    position: relative;
+    width: 100%;
+    height: 4vw;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  #homeMenu .menu-section .foodCard div h2,
+  #homeMenu .menu-section .foodCard div h3 {
+    z-index: 10;
+    padding: 0 1vw;
+    font-size: 1.2vw;
+  }
+  #homeMenu .menu-section .foodCard:hover .description {
+    top: 2vw;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  #homeMenu .menu-section .foodCard .description {
+    z-index: 5;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 10vw;
+    padding: 4vw 1vw;
+    position: absolute;
+    font-size: 1.2vw;
+    background-color: #ffffff;
+    width: 100%;
+    top: -2vw;
+    border-radius: 0 0 30px 0;
+    opacity: 0;
+    -webkit-box-shadow: 0 1px 2px 0 #383838;
+            box-shadow: 0 1px 2px 0 #383838;
+  }
+}
+
 /* mobile menu end*/
 .splitter-line {
   width: 100%;

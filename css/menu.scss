@@ -115,6 +115,91 @@ header {
     }
 }
 
+@media only screen and (min-width: 450px) {
+    .tablet-body {
+        display: block;
+    }
+    .right {
+        @include gridCenter;
+        position: relative;
+        width: 70%;
+        left: 30%;
+    }
+    #homeMenu {
+        width: 100%;
+        margin-bottom: 0;
+        h1 {
+            color: $cardBgColor;
+            @include textShadow(2px);
+            font-size: 2rem;
+            line-height: 2vw;
+        }
+        #pizza {
+            position: sticky;
+            top: 0vw;
+        }
+        #slides {
+            position: sticky;
+            top: 2vw;
+        }
+        #desserts {
+            position: sticky;
+            top: 4vw;
+        }
+        .menu-section {
+            @include gridCenter;
+            width: 95%;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            .foodCard {
+                width: 80%;
+                height: 16vw;
+                display: grid;
+                align-items: start;
+                grid-template-columns: 1fr;
+                grid-template-rows: 5fr 2fr;
+                row-gap: 0;
+                border-radius: 30px 0;
+                img {
+                    width: 100%;
+                    height: 10vw;
+                    border-radius: 30px 0 0 0;
+                }
+                div {
+                    position: relative;
+                    width: 100%;
+                    height: 4vw;
+                    grid-template-rows: 1fr 1fr;
+                    h2,
+                    h3 {
+                        z-index: 10;
+                        padding: 0 1vw;
+                        font-size: $desktopMenuFontSize;
+                    }
+                }
+                &:hover .description {
+                    top: 2vw;
+                    opacity: 1;
+                    transition: all 0.3s ease-out;
+                }
+                .description {
+                    z-index: 5;
+                    box-sizing: border-box;
+                    height: 10vw;
+                    padding: 4vw 1vw;
+                    position: absolute;
+                    font-size: $desktopMenuFontSize;
+                    background-color: $cardBgColor;
+                    width: 100%;
+                    top: -2vw;
+                    border-radius: 0 0 30px 0;
+                    opacity: 0;
+                    @include pageShadow(2px);
+                }
+            }
+        }
+    }
+}
+
 
 /* mobile menu end*/
 
