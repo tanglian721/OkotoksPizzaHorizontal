@@ -63,6 +63,21 @@ a {
     }
 }
 
+@keyframes slide {
+    3% {
+        transform: translateX( 0);
+    }
+    25% {
+        transform: translateX( 0);
+    }
+    28% {
+        transform: translateX( -100%);
+    }
+    100% {
+        transform: translateX( -100%);
+    }
+}
+
 
 /*mobile-homeMenu-start*/
 
@@ -193,6 +208,7 @@ a {
         }
         .contact-title {
             justify-self: right;
+            margin-right: 1vw;
         }
     }
 }
@@ -213,17 +229,41 @@ a {
         position: relative;
         width: 70%;
         left: 30%;
-        // overflow: hidden;
+        overflow: hidden;
     }
     .homepagePhoto {
         width: 100%;
-        .tabletPhotoFrame {
+        .slideFrame {
+            position: relative;
             width: 100%;
-            max-height: 70vh;
+            height: 45vw;
             overflow: hidden;
-            img {
+            .photo {
+                position: absolute;
                 width: 100%;
-                object-fit: cover;
+                top: 0;
+                left: 0;
+                transform: translateX(100%);
+                img {
+                    width: 100%;
+                }
+                animation: slide 20s cubic-bezier(0, 0.5, 0.5, 0.97) infinite;
+                &-one {
+                    z-index: 10;
+                }
+                &-two {
+                    z-index: 9;
+                    animation-delay: 5s;
+                }
+                &-three {
+                    z-index: 8;
+                    animation-delay: 10s;
+                }
+                &-four {
+                    z-index: 7;
+                    animation-delay: 15s;
+                    ;
+                }
             }
         }
     }
