@@ -1,206 +1,287 @@
-@import './variable';
-@import './mixin';
-* {
-    @include bodyDefault;
-}
-
-body {
-    @include bodyDefault;
-    background: linear-gradient(317.45deg, rgba(255, 160, 13, 0.52) -78.63%, #FFFFFF 106.21%);
-    min-height: 100vh;
-    width: 100%;
-    min-height: 100vh;
-}
-
-a {
-    text-decoration: none;
-}
-
-.splitter-blank {
-    height: 5vh;
-}
-
-.tablet-body {
-    display: none;
-}
-
-@import './header';
-header {
-    margin-bottom: 3vh;
-}
-
-
-/* mobile menu start*/
-
-#homeMenu {
-    @include gridCenter;
-    row-gap: 5vh;
-    margin-bottom: 5vh;
-    h1 {
-        @include articleFont;
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        justify-self: left;
-        padding: 1vw 6vw 1vw 3vw;
-        color: $cardBgColor;
-        line-height: 10vw;
-        text-shadow: 1px 1px 1px rgb(56, 56, 56);
-        background-color: $primaryColor;
-        border-radius: 0 1.5rem 1.5rem 0;
+    @import './variable';
+    @import './mixin';
+    * {
+        @include bodyDefault;
     }
-    #pizza {
-        position: sticky;
-        top: 22vw;
+    
+    body {
+        @include bodyDefault;
+        background: linear-gradient(317.45deg, rgba(255, 160, 13, 0.52) -78.63%, #FFFFFF 106.21%);
+        min-height: 100vh;
+        width: 100%;
+        min-height: 100vh;
     }
-    #slides {
-        position: sticky;
-        top: 32vw;
+    
+    a {
+        text-decoration: none;
     }
-    #desserts {
-        position: sticky;
-        top: 42vw;
+    
+    .splitter-blank {
+        height: 5vh;
     }
-    .menu-section {
+    
+    .tablet-body {
+        display: none;
+    }
+    
+    @import './header';
+    header {
+        margin-bottom: 3vh;
+    }
+    /* mobile menu start*/
+    
+    #homeMenu {
         @include gridCenter;
-        width: 80%;
         row-gap: 5vh;
-        .foodCard {
-            @include gridCenter;
-            row-gap: 5vh;
-            grid-template-columns: 1fr 1.2fr;
-            background-color: $cardBgColor;
-            height: 30vw;
+        margin-bottom: 5vh;
+        .categorys {
             width: 100%;
-            border-radius: 18px;
-            @include pageShadow(2px);
-            &:hover {
-                cursor: pointer;
-            }
-            &:active {
-                @include pageShadow(0px);
-            }
-            img {
-                width: 28vw;
-                height: 23vw;
-                border-radius: 18px;
-                object-fit: cover;
-            }
-            div {
+            @include gridCenter;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 5vw;
+            height: 10vh;
+            .category {
                 @include gridCenter;
-                width: 40vw;
-                height: 23vw;
-                h2 {
-                    @include articleFont;
-                    font-size: 3.5vw;
-                    text-transform: uppercase;
-                    line-height: 12px;
-                    justify-self: left;
-                    margin: 0;
-                }
-                h3 {
-                    @include articleFont;
-                    font-size: 3.5vw;
-                    text-transform: uppercase;
-                    line-height: 15px;
-                    justify-self: right;
-                    margin: 0;
-                    color: $priceColor;
-                }
-                p {
-                    @include articleFont;
-                    font-size: 3vw;
+                @include headerFont;
+                text-transform: uppercase;
+                line-height: 3vw;
+                img {
+                    height: 5vh;
                 }
             }
         }
-    }
-}
-
-@media only screen and (min-width: 450px) {
-    .tablet-body {
-        display: block;
-    }
-    .right {
-        @include gridCenter;
-        position: relative;
-        width: 70%;
-        left: 30%;
-    }
-    #homeMenu {
-        width: 100%;
-        margin-bottom: 0;
         h1 {
-            color: $cardBgColor;
-            @include textShadow(2px);
-            font-size: 2rem;
-            line-height: 2vw;
+            z-index: 19;
+            @include articleFont;
+            @include pageShadow(1px);
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            justify-self: left;
+            padding: 1vw 6vw 1vw 3vw;
+            line-height: 10vw;
+            text-shadow: 1px 1px 1px rgb(56, 56, 56);
+            background-color: $primaryColor;
+            border-radius: 0 1.5rem 1.5rem 0;
+            a {
+                color: $cardBgColor;
+            }
         }
         #pizza {
             position: sticky;
-            top: 0vw;
+            top: 24vw;
         }
         #slides {
             position: sticky;
-            top: 2vw;
+            top: 36.3vw;
         }
         #desserts {
             position: sticky;
-            top: 4vw;
+            top: 42vw;
         }
         .menu-section {
             @include gridCenter;
-            width: 95%;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            width: 80%;
+            row-gap: 5vh;
             .foodCard {
-                width: 80%;
-                height: 16vw;
-                display: grid;
-                align-items: start;
-                grid-template-columns: 1fr;
-                grid-template-rows: 5fr 2fr;
-                row-gap: 0;
-                border-radius: 30px 0;
+                @include gridCenter;
+                row-gap: 5vh;
+                grid-template-columns: 1fr 1.2fr;
+                background-color: $cardBgColor;
+                height: 30vw;
+                width: 100%;
+                border-radius: 18px;
+                @include pageShadow(2px);
+                &:hover {
+                    cursor: pointer;
+                }
+                &:active {
+                    @include pageShadow(0px);
+                }
                 img {
-                    width: 100%;
-                    height: 10vw;
-                    border-radius: 30px 0 0 0;
+                    width: 28vw;
+                    height: 23vw;
+                    border-radius: 18px;
+                    object-fit: cover;
                 }
                 div {
-                    position: relative;
-                    width: 100%;
-                    height: 4vw;
-                    grid-template-rows: 1fr 1fr;
-                    h2,
-                    h3 {
-                        z-index: 10;
-                        padding: 0 1vw;
-                        font-size: $desktopMenuFontSize;
+                    @include gridCenter;
+                    width: 40vw;
+                    height: 23vw;
+                    h2 {
+                        @include articleFont;
+                        font-size: 3.5vw;
+                        text-transform: uppercase;
+                        line-height: 12px;
+                        justify-self: left;
+                        margin: 0;
                     }
-                }
-                &:hover .description {
-                    top: 2vw;
-                    opacity: 1;
-                    transition: all 0.3s ease-out;
-                }
-                .description {
-                    z-index: 5;
-                    box-sizing: border-box;
-                    height: 10vw;
-                    padding: 4vw 1vw;
-                    position: absolute;
-                    font-size: $desktopMenuFontSize;
-                    background-color: $cardBgColor;
-                    width: 100%;
-                    top: -2vw;
-                    border-radius: 0 0 30px 0;
-                    opacity: 0;
-                    @include pageShadow(2px);
+                    h3 {
+                        @include articleFont;
+                        font-size: 3.5vw;
+                        text-transform: uppercase;
+                        line-height: 15px;
+                        justify-self: right;
+                        margin: 0;
+                        color: $priceColor;
+                    }
+                    p {
+                        @include articleFont;
+                        font-size: 3vw;
+                    }
                 }
             }
         }
     }
-}
-
-
-/* mobile menu end*/
-
-@import './footer';
+    
+    @media only screen and (min-width: 450px) {
+        .tablet-body {
+            display: block;
+        }
+        .categorys {
+            height: 5vh;
+        }
+        .right {
+            @include gridCenter;
+            position: relative;
+            width: 70%;
+            left: 30%;
+        }
+        #homeMenu {
+            width: 100%;
+            h1 {
+                color: $cardBgColor;
+                @include textShadow(2px);
+                font-size: 2rem;
+                line-height: 2vw;
+            }
+            #pizza {
+                position: sticky;
+                top: 0vw;
+            }
+            #slides {
+                position: sticky;
+                top: 4vw;
+            }
+            #desserts {
+                position: sticky;
+                top: 8vw;
+            }
+            .menu-section {
+                @include gridCenter;
+                width: 95%;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 300px));
+                justify-content: space-evenly;
+                margin-bottom: 6vh;
+                .foodCard {
+                    width: 80%;
+                    height: 15vw;
+                    display: grid;
+                    align-items: start;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 5fr 2fr;
+                    row-gap: 0;
+                    border-radius: 30px 0;
+                    img {
+                        width: 100%;
+                        height: 10vw;
+                        border-radius: 30px 0 0 0;
+                    }
+                    div {
+                        position: relative;
+                        width: 100%;
+                        height: 4vw;
+                        grid-template-rows: 1fr 1fr;
+                        h2,
+                        h3 {
+                            z-index: 10;
+                            padding: 0 1vw;
+                            font-size: $desktopMenuFontSize;
+                        }
+                    }
+                    &:hover .description {
+                        top: 2vw;
+                        opacity: 1;
+                        transition: all 0.3s ease-out;
+                    }
+                    .description {
+                        z-index: 5;
+                        box-sizing: border-box;
+                        height: 10vw;
+                        padding: 4vw 1vw;
+                        position: absolute;
+                        font-size: $desktopMenuFontSize;
+                        background-color: $cardBgColor;
+                        width: 100%;
+                        top: -2vw;
+                        border-radius: 0 0 30px 0;
+                        opacity: 0;
+                        @include pageShadow(2px);
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 1367px) {
+        .right {
+            width: 80%;
+            left: 20%;
+        }
+        #homeMenu {
+            h1 {
+                line-height: 1vw;
+            }
+            #pizza {
+                position: sticky;
+                top: 0vw;
+            }
+            #slides {
+                position: sticky;
+                top: 3vw;
+            }
+            #desserts {
+                position: sticky;
+                top: 8vw;
+            }
+            .menu-section {
+                grid-template-columns: repeat(auto-fit, 360px);
+                column-gap: 2vw;
+                .foodCard {
+                    height: 12.5vw;
+                    img {
+                        height: 8vw;
+                    }
+                    #pizza {
+                        position: sticky;
+                        top: 0vw;
+                    }
+                    #slides {
+                        position: sticky;
+                        top: 4vw;
+                    }
+                    #desserts {
+                        position: sticky;
+                        top: 8vw;
+                    }
+                    width: 300px;
+                    grid-template-rows: 5fr 4fr;
+                    div {
+                        h2,
+                        h3 {
+                            font-size: 1.1vw;
+                            line-height: 1.2vw;
+                        }
+                        .description {
+                            font-size: 1vw;
+                        }
+                    }
+                    &:hover .description {
+                        top: 1vw;
+                    }
+                }
+            }
+        }
+    }
+    /* mobile menu end*/
+    
+    @import './footer';

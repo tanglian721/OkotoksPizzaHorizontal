@@ -35,6 +35,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  height: 18vw;
   padding: 3vw 0;
   background-color: #ffffff;
   border-radius: 0 0 20px 20px;
@@ -283,30 +284,67 @@ header {
   margin-bottom: 5vh;
 }
 
+#homeMenu .categorys {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 5vw;
+          column-gap: 5vw;
+  height: 10vh;
+}
+
+#homeMenu .categorys .category {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  font-family: 'Kanit', sans-serif;
+  text-transform: uppercase;
+  line-height: 3vw;
+}
+
+#homeMenu .categorys .category img {
+  height: 5vh;
+}
+
 #homeMenu h1 {
+  z-index: 19;
   font-family: 'Rokkitt', serif;
+  -webkit-box-shadow: 0 1px 1px 0 #383838;
+          box-shadow: 0 1px 1px 0 #383838;
   text-transform: uppercase;
   font-size: 1.5rem;
   -ms-grid-column-align: left;
       justify-self: left;
   padding: 1vw 6vw 1vw 3vw;
-  color: #ffffff;
   line-height: 10vw;
   text-shadow: 1px 1px 1px #383838;
   background-color: #FFA00D;
   border-radius: 0 1.5rem 1.5rem 0;
 }
 
+#homeMenu h1 a {
+  color: #ffffff;
+}
+
 #homeMenu #pizza {
   position: -webkit-sticky;
   position: sticky;
-  top: 22vw;
+  top: 24vw;
 }
 
 #homeMenu #slides {
   position: -webkit-sticky;
   position: sticky;
-  top: 32vw;
+  top: 36.3vw;
 }
 
 #homeMenu #desserts {
@@ -402,6 +440,9 @@ header {
   .tablet-body {
     display: block;
   }
+  .categorys {
+    height: 5vh;
+  }
   .right {
     display: -ms-grid;
     display: grid;
@@ -415,7 +456,6 @@ header {
   }
   #homeMenu {
     width: 100%;
-    margin-bottom: 0;
   }
   #homeMenu h1 {
     color: #ffffff;
@@ -431,12 +471,12 @@ header {
   #homeMenu #slides {
     position: -webkit-sticky;
     position: sticky;
-    top: 2vw;
+    top: 4vw;
   }
   #homeMenu #desserts {
     position: -webkit-sticky;
     position: sticky;
-    top: 4vw;
+    top: 8vw;
   }
   #homeMenu .menu-section {
     display: -ms-grid;
@@ -446,12 +486,16 @@ header {
             align-items: center;
     justify-items: center;
     width: 95%;
-    -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    -ms-grid-columns: (minmax(220px, 300px))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(220px, 300px));
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-bottom: 6vh;
   }
   #homeMenu .menu-section .foodCard {
     width: 80%;
-    height: 16vw;
+    height: 15vw;
     display: -ms-grid;
     display: grid;
     -webkit-box-align: start;
@@ -503,6 +547,72 @@ header {
     opacity: 0;
     -webkit-box-shadow: 0 1px 2px 0 #383838;
             box-shadow: 0 1px 2px 0 #383838;
+  }
+}
+
+@media only screen and (min-width: 1367px) {
+  .right {
+    width: 80%;
+    left: 20%;
+  }
+  #homeMenu h1 {
+    line-height: 1vw;
+  }
+  #homeMenu #pizza {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0vw;
+  }
+  #homeMenu #slides {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3vw;
+  }
+  #homeMenu #desserts {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 8vw;
+  }
+  #homeMenu .menu-section {
+    -ms-grid-columns: (360px)[auto-fit];
+        grid-template-columns: repeat(auto-fit, 360px);
+    -webkit-column-gap: 2vw;
+            column-gap: 2vw;
+  }
+  #homeMenu .menu-section .foodCard {
+    height: 12.5vw;
+    width: 300px;
+    -ms-grid-rows: 5fr 4fr;
+        grid-template-rows: 5fr 4fr;
+  }
+  #homeMenu .menu-section .foodCard img {
+    height: 8vw;
+  }
+  #homeMenu .menu-section .foodCard #pizza {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0vw;
+  }
+  #homeMenu .menu-section .foodCard #slides {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4vw;
+  }
+  #homeMenu .menu-section .foodCard #desserts {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 8vw;
+  }
+  #homeMenu .menu-section .foodCard div h2,
+  #homeMenu .menu-section .foodCard div h3 {
+    font-size: 1.1vw;
+    line-height: 1.2vw;
+  }
+  #homeMenu .menu-section .foodCard div .description {
+    font-size: 1vw;
+  }
+  #homeMenu .menu-section .foodCard:hover .description {
+    top: 1vw;
   }
 }
 

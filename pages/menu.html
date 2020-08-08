@@ -25,9 +25,9 @@
                 <label for="nav-menu-dropdown-check" id="nav-menu-dropdown-icon"></label>
                 <input type="checkbox" id="nav-menu-dropdown-check" hidden>
                 <div class="nav-menu-dropdown-container">
-                    <a href="#pizza" class="nav-menu-dropdown-btn">pizza</a>
-                    <a href="#slides" class="nav-menu-dropdown-btn">slides and sides</a>
-                    <a href="#desserts" class="nav-menu-dropdown-btn">desserts</a>
+                    <a href="#linkPizza" class="nav-menu-dropdown-btn">pizza</a>
+                    <a href="#linkSlides" class="nav-menu-dropdown-btn">slides and sides</a>
+                    <a href="#linkDesserts" class="nav-menu-dropdown-btn">desserts</a>
                 </div>
             </div>
             <a href="../index.html" class="nav-btn">about</a>
@@ -38,10 +38,15 @@
     <div class="right">
         <!--menu start-->
         <div id="homeMenu">
-            <h1 id="pizza">pizza</h1>
+            <div class="categorys">
+                <a href="#linkPizza" class="category"><img src="../images/CategoryPizza.png" alt="pizzaIcon"><br> pizza</a>
+                <a href="#linkSlides" class="category"><img src="../images/CategorySlides.png" alt="slidesIcon"><br> Slides&Sides</a>
+                <a href="#linkDesserts" class="category"><img src="../images/CategoryDessert.png" alt="dessertsIcon"><br> Desserts</a>
+            </div>
+            <h1 id="pizza"><a href="#linkPizza">pizza</a></h1>
             <div class="menu-section">
                 <div class="foodCard">
-                    <img src="../images/menu1-Countryside.jpg" alt="Countryside pizza">
+                    <img src="../images/menu1-Countryside.jpg" alt="Countryside pizza" id="linkPizza">
                     <div>
                         <h2>Countryside pizza</h2>
                         <h3>CAD:12.00 </h3>
@@ -161,10 +166,10 @@
                     </div>
                 </div>
             </div>
-            <h1 id="slides">slides and sides</h1>
+            <h1 id="slides"><a href="#linkSlides">slides and sides</a> </h1>
             <div class="menu-section">
                 <div class="foodCard">
-                    <img src="../images/menu21-Sausage-Set.jpg" alt="BAKED SAUSAGE">
+                    <img src="../images/menu21-Sausage-Set.jpg" alt="BAKED SAUSAGE" id="linkSlides">
                     <div>
                         <h2>BAKED SAUSAGE</h2>
                         <h3>CAD:15.00</h3>
@@ -213,10 +218,10 @@
                     </div>
                 </div>
             </div>
-            <h1 id="desserts">desserts</h1>
+            <h1 id="desserts"><a href="#linkDesserts">desserts</a> </h1>
             <div class="menu-section">
                 <div class="foodCard">
-                    <img src="../images/menu31-TIRAMISU.jpg" alt="TIRAMISU">
+                    <img src="../images/menu31-TIRAMISU.jpg" alt="TIRAMISU" id="linkDesserts">
                     <div>
                         <h2>TIRAMISU</h2>
                         <h3>CAD:15.00</h3>

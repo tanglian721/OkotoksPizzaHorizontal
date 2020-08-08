@@ -3,6 +3,7 @@ header {
     @include gridCenter;
     position: sticky;
     top: 0;
+    height: 18vw;
     padding: 3vw 0;
     background-color: $cardBgColor;
     border-radius: 0 0 20px 20px;
