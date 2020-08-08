@@ -6,7 +6,7 @@
     
     body {
         @include bodyDefault;
-        background: linear-gradient(317.45deg, rgba(255, 160, 13, 0.52) -78.63%, #FFFFFF 106.21%);
+        background: linear-gradient(317.45deg, rgba(255, 160, 13, 0.22) -78.63%, #FFFFFF 106.21%);
         min-height: 100vh;
         width: 100%;
         min-height: 100vh;
@@ -45,6 +45,11 @@
                 @include headerFont;
                 text-transform: uppercase;
                 line-height: 3vw;
+                p {
+                    margin-top: 5px;
+                    font-size: 0.8rem;
+                    color: black;
+                }
                 img {
                     height: 5vh;
                 }
@@ -137,34 +142,46 @@
         .tablet-body {
             display: block;
         }
-        .categorys {
-            height: 5vh;
-        }
         .right {
             @include gridCenter;
             position: relative;
-            width: 70%;
-            left: 30%;
+            width: 80%;
+            left: 20%;
         }
         #homeMenu {
             width: 100%;
+            .categorys {
+                width: 90%;
+                z-index: 12;
+                position: sticky;
+                top: 0;
+                padding-top: 1vw;
+                background-color: #fffdf8;
+                height: 10vw;
+                justify-content: space-evenly;
+                border-bottom: 1px solid black;
+                .category {
+                    font-weight: bold;
+                    line-height: 3vw;
+                }
+            }
             h1 {
                 color: $cardBgColor;
                 @include textShadow(2px);
-                font-size: 2rem;
+                font-size: 1.5rem;
                 line-height: 2vw;
             }
             #pizza {
                 position: sticky;
-                top: 0vw;
+                top: 11vw;
             }
             #slides {
                 position: sticky;
-                top: 4vw;
+                top: 15vw;
             }
             #desserts {
                 position: sticky;
-                top: 8vw;
+                top: 19vw;
             }
             .menu-section {
                 @include gridCenter;
@@ -182,6 +199,8 @@
                     row-gap: 0;
                     border-radius: 30px 0;
                     img {
+                        box-sizing: border-box;
+                        border: 2px solid white;
                         width: 100%;
                         height: 10vw;
                         border-radius: 30px 0 0 0;

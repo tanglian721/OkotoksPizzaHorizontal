@@ -3,7 +3,7 @@ header {
     @include gridCenter;
     position: sticky;
     top: 0;
-    height: 18vw;
+    min-height: 18vw;
     padding: 3vw 0;
     background-color: $cardBgColor;
     border-radius: 0 0 20px 20px;
@@ -47,6 +47,7 @@ header {
         @include headerFont;
         color: $primaryColor;
         padding: 0 10px;
+        text-align: center;
         &:active {
             font-size: 0.9rem;
             transition: all 0.2s ease-in;
@@ -130,7 +131,7 @@ header {
         position: fixed;
         top: 0;
         left: 0;
-        width: 30%;
+        width: 20%;
         height: 100vh;
         padding: 0;
         grid-template-rows: 2fr 2fr 5fr;
@@ -142,9 +143,9 @@ header {
         }
         #tel {
             position: static;
-            font-size: 1.2rem;
+            font-size: 1rem;
             background-color: $cardBgColor;
-            padding: 1vw 2vw;
+            padding: 1vw 1vw;
             border-radius: 2vw;
         }
         .nav-menu {
@@ -160,7 +161,7 @@ header {
             }
             .nav-menu-dropdown {
                 label {
-                    left: 10vw;
+                    left: 8vw;
                     top: -2.5vw;
                     &::before {
                         color: $cardBgColor;
@@ -185,7 +186,7 @@ header {
             height: 10vh;
         }
         #tel {
-            font-size: $desktopMenuFontSize;
+            font-size: 1.2rem;
             padding: 0.5vw 1vw;
             &:hover {
                 font-size: 1.3vw;
@@ -194,7 +195,7 @@ header {
         }
         .nav-menu {
             a {
-                font-size: $desktopMenuFontSize;
+                font-size: 1.2rem;
                 line-height: 3vw;
             }
             .nav-menu-dropdown {
