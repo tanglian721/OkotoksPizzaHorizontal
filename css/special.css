@@ -471,6 +471,43 @@ header {
     width: 80%;
     left: 20%;
   }
+  .salesPart {
+    width: 100%;
+    height: 40vw;
+  }
+  .salesPart .salesPhoto {
+    width: 100%;
+    position: relative;
+  }
+  .salesPart .salesPhoto img {
+    width: auto;
+    height: 80%;
+    float: right;
+    -webkit-transform: translate(-20%, 10%);
+            transform: translate(-20%, 10%);
+  }
+  .salesPart .salesPhoto p,
+  .salesPart .salesPhoto a {
+    -webkit-transform: none;
+            transform: none;
+    left: 0;
+  }
+  .salesPart .salesPhoto p {
+    position: absolute;
+    color: black;
+    text-shadow: 2px 2px 5px #FFA00D;
+    font-size: 2.5rem;
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+    left: 10%;
+    top: 30%;
+  }
+  .salesPart .salesPhoto a {
+    position: absolute;
+    left: 18%;
+    top: 60%;
+    font-size: 1.5rem;
+  }
   #homeMenu {
     width: 100%;
   }
@@ -592,6 +629,43 @@ header {
   .right {
     width: 80%;
     left: 20%;
+  }
+  .salesPart {
+    width: 100%;
+    height: 40vw;
+  }
+  .salesPart .salesPhoto {
+    width: 100%;
+    position: relative;
+  }
+  .salesPart .salesPhoto img {
+    width: auto;
+    height: 80%;
+    float: right;
+    -webkit-transform: translate(-20%, 10%);
+            transform: translate(-20%, 10%);
+  }
+  .salesPart .salesPhoto p,
+  .salesPart .salesPhoto a {
+    -webkit-transform: none;
+            transform: none;
+    left: 0;
+  }
+  .salesPart .salesPhoto p {
+    position: absolute;
+    color: black;
+    text-shadow: 2px 2px 5px #FFA00D;
+    font-size: 3rem;
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+    left: 10%;
+    top: 30%;
+  }
+  .salesPart .salesPhoto a {
+    position: absolute;
+    left: 18%;
+    top: 60%;
+    font-size: 2rem;
   }
   #homeMenu h1 {
     line-height: 1vw;
