@@ -481,11 +481,11 @@ header {
     position: relative;
   }
   .salesPart .salesPhoto img {
+    position: absolute;
+    left: 50%;
+    top: 10%;
     width: auto;
     height: 80%;
-    float: right;
-    -webkit-transform: translate(-20%, 10%);
-            transform: translate(-20%, 10%);
   }
   .salesPart .salesPhoto p,
   .salesPart .salesPhoto a {
@@ -638,13 +638,6 @@ header {
   .salesPart .salesPhoto {
     width: 100%;
     position: relative;
-  }
-  .salesPart .salesPhoto img {
-    width: auto;
-    height: 80%;
-    float: right;
-    -webkit-transform: translate(-20%, 10%);
-            transform: translate(-20%, 10%);
   }
   .salesPart .salesPhoto p,
   .salesPart .salesPhoto a {

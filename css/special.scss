@@ -173,10 +173,11 @@ header {
             height: 100%;
             position: relative;
             img {
+                position: absolute;
+                left: 50%;
+                top: 10%;
                 width: auto;
                 height: 80%;
-                float: right;
-                transform: translate(-20%, 10%);
             }
             p,
             a {
@@ -304,12 +305,6 @@ header {
         .salesPhoto {
             width: 100%;
             position: relative;
-            img {
-                width: auto;
-                height: 80%;
-                float: right;
-                transform: translate(-20%, 10%);
-            }
             p,
             a {
                 transform: none;
