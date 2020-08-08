@@ -250,7 +250,7 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
     height: 10vh;
   }
   header #tel {
-    font-size: 1.2vw;
+    font-size: 0.8rem;
     padding: 0.5vw 1vw;
   }
   header #tel:hover {
@@ -259,7 +259,7 @@ header .nav-menu .nav-menu-dropdown #nav-menu-dropdown-check:checked ~ .nav-menu
     transition: all 0.2s ease-in-out;
   }
   header .nav-menu a {
-    font-size: 1.2vw;
+    font-size: 0.8rem;
     line-height: 3vw;
   }
   header .nav-menu .nav-menu-dropdown label {
@@ -737,7 +737,7 @@ footer #footer-bottom {
   #homeMenu .menu-section .foodCard div h3 {
     z-index: 10;
     padding: 0 1vw;
-    font-size: 1.2vw;
+    font-size: 0.8rem;
   }
   #homeMenu .menu-section .foodCard:hover .description {
     top: 2vw;
@@ -752,7 +752,7 @@ footer #footer-bottom {
     height: 10vw;
     padding: 4vw 1vw;
     position: absolute;
-    font-size: 1.2vw;
+    font-size: 0.8rem;
     background-color: #ffffff;
     width: 100%;
     top: -2vw;
@@ -808,10 +808,10 @@ footer #footer-bottom {
   }
   #homeMenu .menu-section .foodCard div h2,
   #homeMenu .menu-section .foodCard div h3 {
-    font-size: 1.2vw;
+    font-size: 0.8rem;
   }
   #homeMenu .menu-section .foodCard div .description {
-    font-size: 1.2vw;
+    font-size: 0.8rem;
   }
   #contact-text h2 {
     font-size: 1vw;
