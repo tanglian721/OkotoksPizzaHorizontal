@@ -1,123 +1,98 @@
+@import './variable';
+@import './mixin';
+.tablet-header {
+    display: none;
+}
+
 header {
-    z-index: 20;
     @include gridCenter;
     position: sticky;
     top: 0;
-    min-height: 18vw;
-    padding: 3vw 0;
+    height: 9vh;
+    width: 100%;
+    z-index: 20;
     background-color: $cardBgColor;
     border-radius: 0 0 20px 20px;
     >img {
-        height: 16vw;
         position: absolute;
+        z-index: 21;
+        height: 6vh;
+        top: 3vw;
         left: 5vw;
-        top: 5vw;
-    }
-    >label {
-        position: absolute;
-        top: 0;
-        left: 35vw;
-        display: inline-block;
-        height: 16vw;
-        width: 1em;
-        font-size: 20px;
-        box-sizing: border-box;
-        text-indent: -9999px;
-        vertical-align: middle;
-        position: relative;
-        &::before {
-            content: '';
-            box-sizing: inherit;
-            position: absolute;
-            left: 0%;
-            top: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            box-shadow: 0 -.35em, 0 .35em;
-            border-top: 2px solid;
-            width: 100%;
-            color: $primaryColor;
-        }
     }
     #tel {
-        position: absolute;
-        font-size: 1rem;
-        top: 2vw;
         text-decoration: none;
         @include headerFont;
         color: $primaryColor;
-        padding: 0 10px;
-        text-align: center;
+        position: absolute;
+        z-index: 22;
+        top: 4vw;
+        font-size: 1rem;
+        height: 4vh;
+        right: 5vw;
         &:active {
             font-size: 0.9rem;
             transition: all 0.2s ease-in;
         }
     }
-    #nav-dropdown-check:checked~.nav-menu {
-        display: grid;
-    }
     .nav-menu {
-        margin-top: 3vw;
+        z-index: 20;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 7vh;
+        grid-template-columns: repeat(5, 1fr);
         @include gridCenter;
         text-align: center;
-        width: 100%;
-        display: none;
+        border-radius: 20px 20px 0 0;
+        background-color: rgba($color: #ffffff, $alpha: 0.9);
+        overflow: hidden;
+        // align-items: flex-end;
         a {
-            @include headerFont;
-            color: $primaryColor;
-            text-transform: uppercase;
+            @include gridCenter;
             width: 100%;
-            line-height: 10vw;
+            padding: 1vh 0;
+            // display: block;
+            @include headerFont;
+            text-decoration: none;
+            color: $primaryColor;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            div {
+                width: 40%;
+                height: 4vh;
+                background-repeat: no-repeat;
+                background-size: 200%;
+                background-position-x: 0;
+            }
             &:hover {
                 background-color: $primaryColor;
                 color: $cardBgColor;
             }
+            &:hover div {
+                background-position-x: 100%;
+            }
         }
-        .nav-menu-dropdown {
+        .homeIcon {
+            background-image: url(../images/Iconhome.png);
+        }
+        .menuIcon {
+            background-image: url(../images/Iconmenu.png);
+        }
+        .special {
+            background-image: url(../images/Iconsale.png);
+        }
+        .about {
+            background-image: url(../images/Iconpizza.png);
+        }
+        .location {
+            background-image: url(../images/Iconlocation.png);
+        }
+        &-dropdown {
             @include gridCenter;
             width: 100%;
-            position: relative;
-            label {
-                position: absolute;
-                display: inline-block;
-                top: -5vw;
-                left: 30vw;
-                width: 1em;
-                font-size: 20px;
-                box-sizing: border-box;
-                text-indent: -9999px;
-                vertical-align: middle;
-                position: relative;
-                &::before {
-                    content: '';
-                    box-sizing: inherit;
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
-                    height: .65em;
-                    width: .65em;
-                    border-style: solid;
-                    border-width: 2px 0 0 2px;
-                    -ms-transform: translate(-50%, -75%) rotate(225deg);
-                    transform: translate(-50%, -75%) rotate(225deg);
-                    color: $primaryColor;
-                }
-            }
-            >a:hover~#nav-menu-dropdown-icon {
-                &::before {
-                    color: $cardBgColor;
-                }
-            }
             .nav-menu-dropdown-container {
-                @include gridCenter;
-                width: 100%;
                 display: none;
-                background-color: rgba($color: gray, $alpha: 0.1);
-            }
-            #nav-menu-dropdown-check:checked~.nav-menu-dropdown-container {
-                display: grid;
             }
         }
     }
@@ -139,32 +114,68 @@ header {
         border-radius: 0;
         >img {
             position: static;
-            height: 10vw;
+            width: 40%;
+            height: auto;
         }
         #tel {
+            height: auto;
+            padding: 0.5vw 1vw;
             position: static;
-            font-size: 1rem;
+            font-size: 1.2rem;
             background-color: $cardBgColor;
-            padding: 1vw 1vw;
             border-radius: 2vw;
         }
         .nav-menu {
-            display: grid;
+            position: static;
+            bottom: auto;
+            height: auto;
+            border-radius: 0;
+            grid-template-columns: 1fr;
+            background: none;
             a {
+                padding: 1rem;
+                background-color: $primaryColor;
                 color: $cardBgColor;
                 font-size: 1.2rem;
-                line-height: 5vw;
                 &:hover {
                     background-color: $cardBgColor;
                     color: $primaryColor;
                 }
             }
-            .nav-menu-dropdown {
+            &-dropdown {
                 label {
-                    left: 8vw;
-                    top: -2.5vw;
+                    position: absolute;
+                    display: inline-block;
+                    top: -1.8rem;
+                    left: 6rem;
+                    width: 1em;
+                    font-size: 1rem;
+                    box-sizing: border-box;
+                    text-indent: -9999px;
+                    vertical-align: middle;
+                    position: relative;
                     &::before {
+                        content: '';
+                        box-sizing: inherit;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                        height: .65em;
+                        width: .65em;
+                        border-style: solid;
+                        border-width: 2px 0 0 2px;
+                        -ms-transform: translate(-50%, -75%) rotate(225deg);
+                        transform: translate(-50%, -75%) rotate(225deg);
                         color: $cardBgColor;
+                    }
+                }
+                &-container {
+                    @include gridCenter;
+                    width: 100%;
+                    a {
+                        background-color: rgba($color: #ffac2e, $alpha: 0.9);
                     }
                 }
                 a {
@@ -174,6 +185,9 @@ header {
                         }
                     }
                 }
+                #nav-menu-dropdown-check:checked~.nav-menu-dropdown-container {
+                    display: grid;
+                }
             }
         }
     }
@@ -181,28 +195,12 @@ header {
 
 @media only screen and (min-width: 1367px) {
     header {
-        width: 20%;
-        >img {
-            height: 10vh;
-        }
         #tel {
             font-size: 1.2rem;
             padding: 0.5vw 1vw;
             &:hover {
                 font-size: 1.3vw;
                 transition: all 0.2s ease-in-out;
-            }
-        }
-        .nav-menu {
-            a {
-                font-size: 1.2rem;
-                line-height: 3vw;
-            }
-            .nav-menu-dropdown {
-                label {
-                    left: 5vw;
-                    top: -1.5vw;
-                }
             }
         }
     }
