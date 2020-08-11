@@ -269,6 +269,24 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   }
 }
 
+#about {
+  background-color: #FFA00D;
+  color: #ffffff;
+}
+
+#about .about {
+  background-position-x: 100%;
+}
+
+#about:hover {
+  background-color: #ffffff;
+  color: #FFA00D;
+}
+
+#about:hover div {
+  background-position-x: 0%;
+}
+
 /* mobile-about-start*/
 .aboutUs {
   margin-top: 5vh;

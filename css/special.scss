@@ -25,8 +25,19 @@ a {
 }
 
 @import './header';
-header {
-    margin-bottom: 3vh;
+#special {
+    background-color: $primaryColor;
+    color: $cardBgColor;
+    .special {
+        background-position-x: 100%;
+    }
+    &:hover {
+        background-color: $cardBgColor;
+        color: $primaryColor;
+    }
+    &:hover div {
+        background-position-x: 0%;
+    }
 }
 
 .salesPart {
@@ -90,15 +101,7 @@ header {
     }
     #pizza {
         position: sticky;
-        top: 24vw;
-    }
-    #slides {
-        position: sticky;
-        top: 36.3vw;
-    }
-    #desserts {
-        position: sticky;
-        top: 42vw;
+        top: 9vh;
     }
     .menu-section {
         @include gridCenter;
@@ -226,15 +229,7 @@ header {
         }
         #pizza {
             position: sticky;
-            top: 11vw;
-        }
-        #slides {
-            position: sticky;
-            top: 15vw;
-        }
-        #desserts {
-            position: sticky;
-            top: 19vw;
+            top: 0;
         }
         .menu-section {
             @include gridCenter;

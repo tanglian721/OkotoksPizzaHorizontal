@@ -25,6 +25,20 @@
         }
         
         @import './header';
+        #about {
+            background-color: $primaryColor;
+            color: $cardBgColor;
+            .about {
+                background-position-x: 100%;
+            }
+            &:hover {
+                background-color: $cardBgColor;
+                color: $primaryColor;
+            }
+            &:hover div {
+                background-position-x: 0%;
+            }
+        }
         /* mobile-about-start*/
         
         .aboutUs {

@@ -269,8 +269,22 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   }
 }
 
-header {
-  margin-bottom: 3vh;
+#special {
+  background-color: #FFA00D;
+  color: #ffffff;
+}
+
+#special .special {
+  background-position-x: 100%;
+}
+
+#special:hover {
+  background-color: #ffffff;
+  color: #FFA00D;
+}
+
+#special:hover div {
+  background-position-x: 0%;
 }
 
 .salesPart {
@@ -358,19 +372,7 @@ header {
 #homeMenu #pizza {
   position: -webkit-sticky;
   position: sticky;
-  top: 24vw;
-}
-
-#homeMenu #slides {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 36.3vw;
-}
-
-#homeMenu #desserts {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 42vw;
+  top: 9vh;
 }
 
 #homeMenu .menu-section {
@@ -539,17 +541,7 @@ header {
   #homeMenu #pizza {
     position: -webkit-sticky;
     position: sticky;
-    top: 11vw;
-  }
-  #homeMenu #slides {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 15vw;
-  }
-  #homeMenu #desserts {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 19vw;
+    top: 0;
   }
   #homeMenu .menu-section {
     display: -ms-grid;

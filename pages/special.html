@@ -15,25 +15,32 @@
     <!--header-start-->
     <header>
         <img src="../images/okotoksPizzaLogo.png" alt="okotoksPizzaLogo">
-        <label for="nav-dropdown-check" class="mobile-header" id="nav-dropdown-icon"></label>
-        <input type="checkbox" id="nav-dropdown-check" class="mobile-header" hidden>
-        <a href="tel:tel:403555555" id="tel">Tel:(403).555.5555</a>
+        <!-- <label for="nav-dropdown-check" class="mobile-header" id="nav-dropdown-icon"></label>
+        <input type="checkbox" id="nav-dropdown-check" class="mobile-header" hidden> -->
+        <a href="tel:tel:403555555" id="tel">(403).555.5555</a>
+
         <div class="nav-menu">
-            <a href="../index.html" class="nav-btn">home</a>
-            <a href="#" class="nav-btn">special</a>
+            <a href="../index.html" class="nav-btn" id="home">
+                <div class="homeIcon mobile-header"></div>home</a>
+            <a href="#" class="nav-btn" id="special">
+                <div class="special mobile-header"></div>special</a>
             <div class="nav-menu-dropdown">
-                <a href="./menu.html" class="nav-btn">menu</a>
-                <label for="nav-menu-dropdown-check" id="nav-menu-dropdown-icon"></label>
-                <input type="checkbox" id="nav-menu-dropdown-check" hidden>
+                <a href="./menu.html" class="nav-btn" id="menu">
+                    <div class="menuIcon mobile-header"></div>menu</a>
+                <label for="nav-menu-dropdown-check" id="nav-menu-dropdown-icon" class="tablet-header"></label>
+                <input type="checkbox" id="nav-menu-dropdown-check" class="tablet-header" hidden>
                 <div class="nav-menu-dropdown-container">
-                    <a href="#linkPizza" class="nav-menu-dropdown-btn">pizza</a>
-                    <a href="#linkSlides" class="nav-menu-dropdown-btn">slides and sides</a>
-                    <a href="#linkDesserts" class="nav-menu-dropdown-btn">desserts</a>
+                    <a href="./menu.html#pizza" class="nav-menu-dropdown-btn">pizza</a>
+                    <a href="./menu.html#slides" class="nav-menu-dropdown-btn">slides&sides</a>
+                    <a href="./menu.html#desserts" class="nav-menu-dropdown-btn">desserts</a>
                 </div>
             </div>
-            <a href="../index.html" class="nav-btn">about</a>
-            <a href="../index.html#contact" class="nav-btn">location</a>
+            <a href="./about.html" class="nav-btn" id="about">
+                <div class="about mobile-header"></div> about</a>
+            <a href="#contact" class="nav-btn" id="location">
+                <div class="location mobile-header"></div>location</a>
         </div>
+
     </header>
     <!--header-end-->
     <div class="right">
