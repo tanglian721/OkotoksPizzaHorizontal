@@ -59,7 +59,7 @@ header > a img:hover {
 
 header #tel {
   text-decoration: none;
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Heebo', sans-serif;
   color: #FFA00D;
   position: absolute;
   z-index: 22;
@@ -104,7 +104,7 @@ header .nav-menu a {
   justify-items: center;
   width: 100%;
   padding: 1vh 0;
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Heebo', sans-serif;
   text-decoration: none;
   color: #FFA00D;
   font-size: 0.8rem;
@@ -144,7 +144,7 @@ header .nav-menu .aboutIcon {
   background-image: url(../images/Iconpizza.png);
 }
 
-header .nav-menu .location {
+header .nav-menu .locationIcon {
   background-image: url(../images/Iconlocation.png);
 }
 
@@ -263,15 +263,22 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   }
 }
 
-@media only screen and (min-width: 1367px) {
+@media only screen and (min-width: 1024px) {
   header #tel {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     padding: 0.5vw 1vw;
   }
   header #tel:hover {
-    font-size: 1.3vw;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+  }
+  header .nav-menu a {
+    font-size: 0.8rem;
+  }
+  header .nav-menu label {
+    font-size: 0.8rem;
   }
 }
 
@@ -327,7 +334,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Heebo', sans-serif;
   text-transform: uppercase;
   line-height: 3vw;
 }
@@ -343,19 +350,19 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
 }
 
 #homeMenu h1 {
-  z-index: 19;
-  font-family: 'Rokkitt', serif;
-  -webkit-box-shadow: 0 1px 1px 0 #383838;
-          box-shadow: 0 1px 1px 0 #383838;
-  text-transform: uppercase;
-  font-size: 1.5rem;
   -ms-grid-column-align: left;
       justify-self: left;
   padding: 1vw 6vw 1vw 3vw;
-  line-height: 10vw;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5rem;
   text-shadow: 1px 1px 1px #383838;
+  line-height: 10vw;
   background-color: #FFA00D;
   border-radius: 0 1.5rem 1.5rem 0;
+  -webkit-box-shadow: 0 1px 1px 0 #383838;
+          box-shadow: 0 1px 1px 0 #383838;
 }
 
 #homeMenu h1 a {
@@ -392,18 +399,18 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
 }
 
 #homeMenu .menu-section .foodCard {
+  height: 32vw;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  row-gap: 5vh;
   -ms-grid-columns: 1fr 1.2fr;
       grid-template-columns: 1fr 1.2fr;
+  row-gap: 5vh;
   background-color: #ffffff;
-  height: 30vw;
-  width: 100%;
   border-radius: 18px;
   -webkit-box-shadow: 0 1px 2px 0 #383838;
           box-shadow: 0 1px 2px 0 #383838;
@@ -427,46 +434,52 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
 }
 
 #homeMenu .menu-section .foodCard div {
+  width: 40vw;
+  height: 23vw;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  width: 40vw;
-  height: 23vw;
+  overflow: hidden;
 }
 
 #homeMenu .menu-section .foodCard div h2 {
-  font-family: 'Rokkitt', serif;
-  font-size: 3.5vw;
-  text-transform: uppercase;
-  line-height: 12px;
+  height: 0.9rem;
   -ms-grid-column-align: left;
       justify-self: left;
   margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  line-height: 0.8rem;
 }
 
 #homeMenu .menu-section .foodCard div h3 {
-  font-family: 'Rokkitt', serif;
-  font-size: 3.5vw;
-  text-transform: uppercase;
-  line-height: 15px;
+  height: 0.6rem;
   -ms-grid-column-align: right;
       justify-self: right;
-  margin: 0;
+  margin: 0 1.3rem;
+  overflow: hidden;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  line-height: 0.6rem;
   color: red;
 }
 
 #homeMenu .menu-section .foodCard div p {
-  font-family: 'Rokkitt', serif;
-  font-size: 3vw;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  margin-top: 1px;
+  font-size: 0.6rem;
 }
 
-@media only screen and (min-width: 450px) {
-  .tablet-body {
-    display: block;
-  }
+/*tablet layout start*/
+@media only screen and (min-width: 600px) {
   .right {
     display: -ms-grid;
     display: grid;
@@ -482,8 +495,8 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
     width: 100%;
   }
   #homeMenu .categorys {
+    z-index: 20;
     width: 90%;
-    z-index: 12;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -500,6 +513,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
     line-height: 3vw;
   }
   #homeMenu h1 {
+    z-index: 15;
     color: #ffffff;
     text-shadow: 1px 1px 2px #383838;
     font-size: 1.5rem;
@@ -521,150 +535,111 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
     top: 19vw;
   }
   #homeMenu .menu-section {
+    width: 90%;
     display: -ms-grid;
     display: grid;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     justify-items: center;
-    width: 95%;
-    -ms-grid-columns: (minmax(200px, 220px))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(200px, 220px));
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin-bottom: 6vh;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
   }
   #homeMenu .menu-section .foodCard {
-    width: 80%;
-    height: 16vw;
-    display: -ms-grid;
-    display: grid;
+    width: 10rem;
+    height: 10rem;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 7fr 4fr;
-        grid-template-rows: 7fr 4fr;
+    -ms-grid-rows: 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
     row-gap: 0;
     border-radius: 30px 0;
   }
   #homeMenu .menu-section .foodCard img {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border: 2px solid white;
     width: 100%;
-    height: 10vw;
+    height: 100%;
     border-radius: 30px 0 0 0;
   }
   #homeMenu .menu-section .foodCard div {
     position: relative;
     width: 100%;
-    height: 4vw;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    height: 4rem;
+    overflow: visible;
   }
-  #homeMenu .menu-section .foodCard div h2,
+  #homeMenu .menu-section .foodCard div h2 {
+    height: 0.8rem;
+    padding: 0 1vw;
+    font-size: 0.8rem;
+  }
   #homeMenu .menu-section .foodCard div h3 {
     z-index: 10;
-    padding: 0 2vw 0 1vw;
-    font-size: 0.8rem;
-  }
-  #homeMenu .menu-section .foodCard:hover .description {
-    top: 2vw;
-    opacity: 1;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    height: 0.7rem;
+    font-size: 0.7rem;
+    line-height: 0.7rem;
   }
   #homeMenu .menu-section .foodCard .description {
-    z-index: 5;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    height: 10vw;
-    padding: 4vw 1vw;
-    position: absolute;
-    font-size: 0.8rem;
-    background-color: #ffffff;
     width: 100%;
-    top: -2vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 2rem 0.5rem 0 0.5rem;
+    position: absolute;
+    top: -2rem;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
     border-radius: 0 0 30px 0;
+    background-color: #ffffff;
     opacity: 0;
     -webkit-box-shadow: 0 1px 2px 0 #383838;
             box-shadow: 0 1px 2px 0 #383838;
   }
+  #homeMenu .menu-section .foodCard:hover .description {
+    top: 2rem;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
 }
 
-@media only screen and (min-width: 1367px) {
-  .right {
-    width: 80%;
-    left: 20%;
-  }
-  #homeMenu h1 {
-    line-height: 1vw;
-  }
-  #homeMenu #pizza {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0vw;
-  }
-  #homeMenu #slides {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 3vw;
-  }
-  #homeMenu #desserts {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 8vw;
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 20px;
   }
   #homeMenu .menu-section {
-    -ms-grid-columns: (360px)[auto-fit];
-        grid-template-columns: repeat(auto-fit, 360px);
-    -webkit-column-gap: 2vw;
-            column-gap: 2vw;
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    -webkit-column-gap: 5vw;
+            column-gap: 5vw;
   }
   #homeMenu .menu-section .foodCard {
-    height: 12.5vw;
-    width: 300px;
-    -ms-grid-rows: 5fr 4fr;
-        grid-template-rows: 5fr 4fr;
+    width: 200px;
   }
-  #homeMenu .menu-section .foodCard img {
-    height: 8vw;
+  #homeMenu .menu-section .foodCard div h2 {
+    font-size: 0.7rem;
   }
-  #homeMenu .menu-section .foodCard #pizza {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0vw;
-  }
-  #homeMenu .menu-section .foodCard #slides {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 4vw;
-  }
-  #homeMenu .menu-section .foodCard #desserts {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 8vw;
-  }
-  #homeMenu .menu-section .foodCard div h2,
+  #homeMenu .menu-section .foodCard div .description,
   #homeMenu .menu-section .foodCard div h3 {
-    font-size: 1.1vw;
-    line-height: 1.2vw;
-  }
-  #homeMenu .menu-section .foodCard div .description {
-    font-size: 1vw;
-  }
-  #homeMenu .menu-section .foodCard:hover .description {
-    top: 1vw;
+    font-size: 0.6rem;
   }
 }
 
-/* mobile menu end*/
+/*tablet-contact-end*/
+/*desktop layout start*/
+@media only screen and (min-width: 1367px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+/*desktop layout end*/
 .splitter-line {
   width: 100%;
-  height: 0.5px;
+  height: 0.1px;
   background-color: black;
 }
 
@@ -702,7 +677,7 @@ footer #footer-top div p,
 footer #footer-top div a,
 footer #footer-top div span {
   text-decoration: none;
-  font-family: 'Amiri', serif;
+  font-family: 'Quicksand', sans-serif;
   color: black;
   font-size: 0.6rem;
   line-height: 1rem;
@@ -718,7 +693,7 @@ footer #footer-top div span img {
 footer #footer-bottom {
   z-index: 32;
   text-decoration: none;
-  font-family: 'Amiri', serif;
+  font-family: 'Quicksand', sans-serif;
   color: black;
   font-size: 0.6rem;
   line-height: 1rem;

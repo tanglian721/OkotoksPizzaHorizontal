@@ -207,7 +207,7 @@ a {
 
 /*tablet layout start*/
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 600px) {
     .right {
         width: 80%;
         @include gridCenter;

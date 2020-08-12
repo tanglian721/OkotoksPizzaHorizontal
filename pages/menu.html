@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Kanit:wght@500;600&family=Rokkitt:wght@400;500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Lemonada:wght@600&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <meta name="description" content="This is the best pizza restuarant in Calgary and Okotoks. This pages is the menu in our restuarant.">
+    <meta name="keywords" content="Pizza, Calgary, Okotoks, hungry, the best pizza, italian pizza, restuarant, shop, good environment, family, party, menu, all kinds, salads, sides, Dessert, hawiiaii, Chicken-Wings">
+    <meta name="author" content="doug">
     <link rel="shortcut icon" type="image/png" href="./images/tabIcon.png">
     <link rel="stylesheet" href="../css/menu.css">
     <title>Menu-Okotoks Pizza</title>
@@ -12,17 +15,15 @@
 
 <body>
     <!--header-start-->
+    <span class="top"></span>
     <header>
-        <img src="../images/okotoksPizzaLogo.png" alt="okotoksPizzaLogo">
-        <!-- <label for="nav-dropdown-check" class="mobile-header" id="nav-dropdown-icon"></label>
-        <input type="checkbox" id="nav-dropdown-check" class="mobile-header" hidden> -->
+        <a href="#top"><img src="../images/okotoksPizzaLogo.png" alt="okotoksPizzaLogo"></a>
         <a href="tel:tel:403555555" id="tel">(403).555.5555</a>
-
         <div class="nav-menu">
             <a href="../index.html" class="nav-btn" id="home">
                 <div class="homeIcon mobile-header"></div>home</a>
             <a href="./special.html" class="nav-btn" id="special">
-                <div class="special mobile-header"></div>special</a>
+                <div class="specialIcon mobile-header"></div>special</a>
             <div class="nav-menu-dropdown">
                 <a href="#" class="nav-btn" id="menu">
                     <div class="menuIcon mobile-header"></div>menu</a>
@@ -35,9 +36,9 @@
                 </div>
             </div>
             <a href="./about.html" class="nav-btn" id="about">
-                <div class="about mobile-header"></div> about</a>
+                <div class="aboutIcon mobile-header"></div> about</a>
             <a href="#contact" class="nav-btn" id="location">
-                <div class="location mobile-header"></div>location</a>
+                <div class="locationIcon mobile-header"></div>location</a>
         </div>
 
     </header>
@@ -61,8 +62,10 @@
                 <div class="foodCard">
                     <img src="../images/menu1-Countryside.jpg" alt="Countryside pizza">
                     <div>
-                        <h2>Countryside pizza</h2>
-                        <h3>CAD:12.00 </h3>
+                        <h2>Countryside</h2>
+                        <h3>16" &nbsp<del>$20.00</del> &nbsp$16.00</h3>
+                        <h3>12" &nbsp<del>$18.00</del> &nbsp$12.00</h3>
+                        <h3>10" &nbsp<del>$15.00</del> &nbsp$10.00</h3>
                         <p class="description">Tomato Paste, Sliced Buffalo Mozzarella Cheese, Parma Ham, and Arugula</p>
                     </div>
                 </div>
@@ -70,7 +73,9 @@
                     <img src="../images/menu2-SeaWorld.jpg" alt="SeaWorld">
                     <div>
                         <h2>SeaWorld</h2>
-                        <h3>CAD:12.00</h3>
+                        <h3>16" &nbsp<del>$22.00</del> &nbsp$18.00</h3>
+                        <h3>12" &nbsp<del>$20.00</del> &nbsp$16.00</h3>
+                        <h3>10" &nbsp<del>$16.00</del> &nbsp$12.00</h3>
                         <p class="description">Mozzarella Cheese, Salmon, Cherry Tomatoes, Arugrula and Balsamic Vinegar</p>
                     </div>
                 </div>
@@ -78,7 +83,9 @@
                     <img src="../images/menu3-Four-Cheese.jpg" alt="Four-Cheese">
                     <div>
                         <h2>Four-Cheese</h2>
-                        <h3>CAD:12.00</h3>
+                        <h3>16" &nbsp<del>$20.00</del> &nbsp$16.00</h3>
+                        <h3>12" &nbsp<del>$18.00</del> &nbsp$12.00</h3>
+                        <h3>10" &nbsp<del>$15.00</del> &nbsp$10.00</h3>
                         <p class="description">White Base with Gorgonzola Cheese, Mozzarella Cheese, Parmesan Cheese and Ricotta</p>
                     </div>
                 </div>
@@ -272,10 +279,18 @@
                     <p>12:00 ~ 24:00</p>
                     <P>Monday ~ Sunday</P>
                 </div>
-                <div id="link">
-                    <p>Link to:</p>
-                    <a href="https://www.yelp.com/biz/savino-pizzeria-calgary"> <b>Savino Pizzeria</b> </a>&nbsp|
-                    <a href="https://www.yelp.com/biz/nikos-pizza-calgary?osq=pizza"><b>Niko's Pizza</b> </a>
+                <div class="footer-right">
+                    <div id="link">
+                        <span>Link to:</span>
+                        <a href="https://www.yelp.com/biz/savino-pizzeria-calgary"> Savino Pizzeria</a>&nbsp|
+                        <a href="https://www.yelp.com/biz/nikos-pizza-calgary?osq=pizza">Niko's Pizza</a>
+                    </div>
+                    <div class="share">
+                        <a href="www.facebook.com"><img src="../images/sharefacebook.png" alt="facebook"></a>
+                        <a href="www.twittwe.com"><img src="../images/sharetwitter.png" alt="twitter"></a>
+                        <a href="https://www.instagram.com/"><img src="../images/shareinstagram.png" alt="instagram"></a>
+                        <a href="https://www.google.com/shopping?nord=1"><img src="../images/sharecomment.png" alt="google comment"></a>
+                    </div>
                 </div>
             </div>
             <div class="splitter-line"></div>

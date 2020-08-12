@@ -127,7 +127,7 @@ header > a img:hover {
 
 header #tel {
   text-decoration: none;
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Heebo', sans-serif;
   color: #FFA00D;
   position: absolute;
   z-index: 22;
@@ -172,7 +172,7 @@ header .nav-menu a {
   justify-items: center;
   width: 100%;
   padding: 1vh 0;
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Heebo', sans-serif;
   text-decoration: none;
   color: #FFA00D;
   font-size: 0.8rem;
@@ -212,7 +212,7 @@ header .nav-menu .aboutIcon {
   background-image: url(../images/Iconpizza.png);
 }
 
-header .nav-menu .location {
+header .nav-menu .locationIcon {
   background-image: url(../images/Iconlocation.png);
 }
 
@@ -331,15 +331,22 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   }
 }
 
-@media only screen and (min-width: 1367px) {
+@media only screen and (min-width: 1024px) {
   header #tel {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     padding: 0.5vw 1vw;
   }
   header #tel:hover {
-    font-size: 1.3vw;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+  }
+  header .nav-menu a {
+    font-size: 0.8rem;
+  }
+  header .nav-menu label {
+    font-size: 0.8rem;
   }
 }
 
@@ -403,7 +410,8 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
 }
 
 #homeMenu h1 {
-  font-family: 'Rokkitt', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
   -ms-grid-column-align: left;
       justify-self: left;
   margin-left: 15vw;
@@ -473,7 +481,8 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   -ms-grid-column-align: left;
       justify-self: left;
   margin: 0;
-  font-family: 'Rokkitt', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
   font-size: 1rem;
   text-transform: uppercase;
   line-height: 12px;
@@ -484,7 +493,8 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
       justify-self: right;
   margin: 0 1.3rem;
   overflow: hidden;
-  font-family: 'Rokkitt', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
   font-size: 0.6rem;
   text-transform: uppercase;
   line-height: 0.6rem;
@@ -492,7 +502,8 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
 }
 
 #homeMenu .menu-section .foodCard div p {
-  font-family: 'Rokkitt', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
   margin-top: 2px;
   font-size: 0.7rem;
 }
@@ -518,7 +529,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
 }
 
 #contact #map h1 {
-  font-family: 'Amiri', serif;
+  font-family: 'Quicksand', sans-serif;
   text-transform: uppercase;
   font-size: 1rem;
 }
@@ -550,7 +561,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
 }
 
 #contact-text h2 {
-  font-family: 'Amiri', serif;
+  font-family: 'Quicksand', sans-serif;
   margin-left: 9vw;
   color: black;
   text-transform: uppercase;
@@ -565,7 +576,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
 #contact-text p a,
 #contact-text p span {
   text-align: justify;
-  font-family: 'Amiri', serif;
+  font-family: 'Quicksand', sans-serif;
   text-decoration: none;
   color: black;
   font-size: 0.6rem;
@@ -582,7 +593,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
 /*mobile-contact-end*/
 .splitter-line {
   width: 100%;
-  height: 0.5px;
+  height: 0.1px;
   background-color: black;
 }
 
@@ -620,7 +631,7 @@ footer #footer-top div p,
 footer #footer-top div a,
 footer #footer-top div span {
   text-decoration: none;
-  font-family: 'Amiri', serif;
+  font-family: 'Quicksand', sans-serif;
   color: black;
   font-size: 0.6rem;
   line-height: 1rem;
@@ -636,7 +647,7 @@ footer #footer-top div span img {
 footer #footer-bottom {
   z-index: 32;
   text-decoration: none;
-  font-family: 'Amiri', serif;
+  font-family: 'Quicksand', sans-serif;
   color: black;
   font-size: 0.6rem;
   line-height: 1rem;
@@ -653,7 +664,7 @@ footer #footer-bottom {
 }
 
 /*tablet layout start*/
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 600px) {
   .right {
     width: 80%;
     display: -ms-grid;
