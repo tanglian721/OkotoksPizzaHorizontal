@@ -1,0 +1,29 @@
+@keyframes mobilephoto {
+    25% {
+        left: -70vw;
+    }
+    50% {
+        left: -140vw;
+    }
+    75% {
+        left: -210vw;
+    }
+    100% {
+        left: 0vw;
+    }
+}
+
+@keyframes slide {
+    3% {
+        transform: translateX( 0);
+    }
+    25% {
+        transform: translateX( 0);
+    }
+    28% {
+        transform: translateX( -100%);
+    }
+    100% {
+        transform: translateX( -100%);
+    }
+}

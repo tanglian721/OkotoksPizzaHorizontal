@@ -1,207 +1,212 @@
-@import './variable';
-@import './mixin';
-.tablet-header {
-    display: none;
-}
-
-header {
-    @include gridCenter;
-    position: sticky;
-    top: 0;
-    height: 9vh;
-    width: 100%;
-    z-index: 20;
-    background-color: $cardBgColor;
-    border-radius: 0 0 20px 20px;
-    >img {
-        position: absolute;
-        z-index: 21;
-        height: 6vh;
-        top: 3vw;
-        left: 5vw;
-    }
-    #tel {
-        text-decoration: none;
-        @include headerFont;
-        color: $primaryColor;
-        position: absolute;
-        z-index: 22;
-        top: 4vw;
-        font-size: 1rem;
-        height: 4vh;
-        right: 5vw;
-        &:active {
-            font-size: 0.9rem;
-            transition: all 0.2s ease-in;
-        }
-    }
-    .nav-menu {
-        z-index: 20;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 7vh;
-        grid-template-columns: repeat(5, 1fr);
-        @include gridCenter;
-        text-align: center;
-        border-radius: 20px 20px 0 0;
-        background-color: rgba($color: #ffffff, $alpha: 0.9);
-        overflow: hidden;
-        // align-items: flex-end;
-        a {
-            @include gridCenter;
-            width: 100%;
-            padding: 1vh 0;
-            // display: block;
-            @include headerFont;
-            text-decoration: none;
-            color: $primaryColor;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            div {
-                width: 40%;
-                height: 4vh;
-                background-repeat: no-repeat;
-                background-size: 200%;
-                background-position-x: 0;
-            }
-            &:hover {
-                background-color: $primaryColor;
-                color: $cardBgColor;
-            }
-            &:hover div {
-                background-position-x: 100%;
-            }
-        }
-        .homeIcon {
-            background-image: url(../images/Iconhome.png);
-        }
-        .menuIcon {
-            background-image: url(../images/Iconmenu.png);
-        }
-        .special {
-            background-image: url(../images/Iconsale.png);
-        }
-        .about {
-            background-image: url(../images/Iconpizza.png);
-        }
-        .location {
-            background-image: url(../images/Iconlocation.png);
-        }
-        &-dropdown {
-            @include gridCenter;
-            width: 100%;
-            .nav-menu-dropdown-container {
-                display: none;
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 450px) {
-    .mobile-header {
+    @import './variable';
+    @import './mixin';
+    .tablet-header {
         display: none;
     }
+    
     header {
-        position: fixed;
+        @include gridCenter;
+        position: sticky;
         top: 0;
-        left: 0;
-        width: 20%;
-        height: 100vh;
-        padding: 0;
-        grid-template-rows: 2fr 2fr 5fr;
-        background-color: $primaryColor;
-        border-radius: 0;
-        >img {
-            position: static;
-            width: 40%;
-            height: auto;
+        height: 9vh;
+        width: 100%;
+        z-index: 20;
+        background-color: $cardBgColor;
+        border-radius: 0 0 20px 20px;
+        >a img {
+            position: absolute;
+            z-index: 21;
+            height: 6vh;
+            top: 3vw;
+            left: 5vw;
+            &:hover {
+                cursor: pointer;
+            }
         }
         #tel {
-            height: auto;
-            padding: 0.5vw 1vw;
-            position: static;
-            font-size: 1.2rem;
-            background-color: $cardBgColor;
-            border-radius: 2vw;
+            text-decoration: none;
+            @include headerFont;
+            color: $primaryColor;
+            position: absolute;
+            z-index: 22;
+            top: 4vw;
+            font-size: 1rem;
+            height: 4vh;
+            right: 5vw;
+            &:active {
+                font-size: 0.9rem;
+                transition: all 0.2s ease-in;
+            }
         }
         .nav-menu {
-            position: static;
-            bottom: auto;
-            height: auto;
-            border-radius: 0;
-            grid-template-columns: 1fr;
-            background: none;
+            z-index: 20;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 7vh;
+            grid-template-columns: repeat(5, 1fr);
+            @include gridCenter;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+            background-color: rgba($color: #ffffff, $alpha: 0.9);
+            overflow: hidden;
+            // align-items: flex-end;
             a {
-                padding: 1rem;
-                background-color: $primaryColor;
-                color: $cardBgColor;
-                font-size: 1.2rem;
-                &:hover {
-                    background-color: $cardBgColor;
-                    color: $primaryColor;
+                @include gridCenter;
+                width: 100%;
+                padding: 1vh 0;
+                // display: block;
+                @include headerFont;
+                text-decoration: none;
+                color: $primaryColor;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                div {
+                    width: 40%;
+                    height: 4vh;
+                    background-repeat: no-repeat;
+                    background-size: 200%;
+                    background-position-x: 0;
                 }
+                &:hover {
+                    background-color: $primaryColor;
+                    color: $cardBgColor;
+                }
+                &:hover div {
+                    background-position-x: 100%;
+                }
+            }
+            .homeIcon {
+                background-image: url(../images/Iconhome.png);
+            }
+            .menuIcon {
+                background-image: url(../images/Iconmenu.png);
+            }
+            .specialIcon {
+                background-image: url(../images/Iconsale.png);
+            }
+            .aboutIcon {
+                background-image: url(../images/Iconpizza.png);
+            }
+            .location {
+                background-image: url(../images/Iconlocation.png);
             }
             &-dropdown {
-                label {
-                    position: absolute;
-                    display: inline-block;
-                    top: -1.8rem;
-                    left: 6rem;
-                    width: 1em;
-                    font-size: 1rem;
-                    box-sizing: border-box;
-                    text-indent: -9999px;
-                    vertical-align: middle;
-                    position: relative;
-                    &::before {
-                        content: '';
-                        box-sizing: inherit;
-                        position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        -ms-transform: translate(-50%, -50%);
-                        transform: translate(-50%, -50%);
-                        height: .65em;
-                        width: .65em;
-                        border-style: solid;
-                        border-width: 2px 0 0 2px;
-                        -ms-transform: translate(-50%, -75%) rotate(225deg);
-                        transform: translate(-50%, -75%) rotate(225deg);
-                        color: $cardBgColor;
-                    }
+                @include gridCenter;
+                width: 100%;
+                .nav-menu-dropdown-container {
+                    display: none;
                 }
-                &-container {
-                    @include gridCenter;
-                    width: 100%;
-                    a {
-                        background-color: rgba($color: #ffac2e, $alpha: 0.9);
-                    }
-                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 600px) {
+        .mobile-header {
+            display: none;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20%;
+            height: 100vh;
+            padding: 0;
+            grid-template-rows: 2fr 2fr 5fr;
+            background-color: $primaryColor;
+            border-radius: 0;
+            >a img {
+                position: relative;
+                top: 0;
+                left: 30%;
+                width: 40%;
+                height: auto;
+            }
+            #tel {
+                height: auto;
+                padding: 0.5vw 1vw;
+                position: static;
+                font-size: 1rem;
+                background-color: $cardBgColor;
+                border-radius: 2vw;
+            }
+            .nav-menu {
+                position: static;
+                bottom: auto;
+                height: auto;
+                border-radius: 0;
+                grid-template-columns: 1fr;
+                background: none;
                 a {
-                    &:hover~#nav-menu-dropdown-icon {
+                    padding: 1rem;
+                    background-color: $primaryColor;
+                    color: $cardBgColor;
+                    font-size: 1rem;
+                    &:hover {
+                        background-color: $cardBgColor;
+                        color: $primaryColor;
+                    }
+                }
+                &-dropdown {
+                    label {
+                        position: absolute;
+                        display: inline-block;
+                        top: -1.8rem;
+                        left: 4rem;
+                        width: 1em;
+                        font-size: 1rem;
+                        box-sizing: border-box;
+                        text-indent: -9999px;
+                        vertical-align: middle;
+                        position: relative;
                         &::before {
-                            color: $primaryColor;
+                            content: '';
+                            box-sizing: inherit;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            -ms-transform: translate(-50%, -50%);
+                            transform: translate(-50%, -50%);
+                            height: .65em;
+                            width: .65em;
+                            border-style: solid;
+                            border-width: 2px 0 0 2px;
+                            -ms-transform: translate(-50%, -75%) rotate(225deg);
+                            transform: translate(-50%, -75%) rotate(225deg);
+                            color: $cardBgColor;
                         }
                     }
-                }
-                #nav-menu-dropdown-check:checked~.nav-menu-dropdown-container {
-                    display: grid;
+                    &-container {
+                        @include gridCenter;
+                        width: 100%;
+                        a {
+                            background-color: rgba($color: #ffac2e, $alpha: 0.9);
+                        }
+                    }
+                    a {
+                        &:hover~#nav-menu-dropdown-icon {
+                            &::before {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                    #nav-menu-dropdown-check:checked~.nav-menu-dropdown-container {
+                        display: grid;
+                    }
                 }
             }
         }
     }
-}
-
-@media only screen and (min-width: 1367px) {
-    header {
-        #tel {
-            font-size: 1.2rem;
-            padding: 0.5vw 1vw;
-            &:hover {
-                font-size: 1.3vw;
-                transition: all 0.2s ease-in-out;
+    
+    @media only screen and (min-width: 1367px) {
+        header {
+            #tel {
+                font-size: 1.2rem;
+                padding: 0.5vw 1vw;
+                &:hover {
+                    font-size: 1.3vw;
+                    transition: all 0.2s ease-in-out;
+                }
             }
         }
     }
-}

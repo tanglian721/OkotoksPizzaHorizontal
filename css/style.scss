@@ -1,5 +1,6 @@
 @import './mixin';
 @import './variable';
+@import './animation';
 * {
     @include bodyDefault;
 }
@@ -43,21 +44,6 @@ a {
 
 /*mobile-homepagePhoto-start*/
 
-@keyframes mobilephoto {
-    25% {
-        left: -70vw;
-    }
-    50% {
-        left: -140vw;
-    }
-    75% {
-        left: -210vw;
-    }
-    100% {
-        left: 0vw;
-    }
-}
-
 .homepagePhoto {
     @include gridCenter;
     width: 100%;
@@ -78,21 +64,6 @@ a {
     }
 }
 
-@keyframes slide {
-    3% {
-        transform: translateX( 0);
-    }
-    25% {
-        transform: translateX( 0);
-    }
-    28% {
-        transform: translateX( -100%);
-    }
-    100% {
-        transform: translateX( -100%);
-    }
-}
-
 
 /*mobile-homeMenu-start*/
 
@@ -101,23 +72,23 @@ a {
     row-gap: 5vh;
     h1 {
         @include articleFont;
-        text-transform: uppercase;
-        font-size: 1.5rem;
         justify-self: left;
         margin-left: 15vw;
         margin-bottom: -5vh;
+        text-transform: uppercase;
+        font-size: 1.5rem;
     }
     .menu-section {
-        @include gridCenter;
         width: 80%;
+        @include gridCenter;
         row-gap: 5vh;
         .foodCard {
-            @include gridCenter;
-            row-gap: 5vh;
-            grid-template-columns: 1fr 1.2fr;
-            background-color: $cardBgColor;
             height: 30vw;
             width: 100%;
+            @include gridCenter;
+            grid-template-columns: 1fr 1.2fr;
+            row-gap: 5vh;
+            background-color: $cardBgColor;
             border-radius: 18px;
             @include pageShadow(2px);
             &:hover {
@@ -133,29 +104,31 @@ a {
                 object-fit: cover;
             }
             div {
-                @include gridCenter;
                 width: 40vw;
                 height: 23vw;
+                @include gridCenter;
                 h2 {
-                    @include articleFont;
-                    font-size: 3.5vw;
-                    text-transform: uppercase;
-                    line-height: 12px;
                     justify-self: left;
                     margin: 0;
+                    @include articleFont;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    line-height: 12px;
                 }
                 h3 {
-                    @include articleFont;
-                    font-size: 3.5vw;
-                    text-transform: uppercase;
-                    line-height: 15px;
                     justify-self: right;
-                    margin: 0;
+                    margin: 0 1.3rem;
+                    overflow: hidden;
+                    @include articleFont;
+                    font-size: 0.6rem;
+                    text-transform: uppercase;
+                    line-height: 0.6rem;
                     color: $priceColor;
                 }
                 p {
                     @include articleFont;
-                    font-size: 3vw;
+                    margin-top: 2px;
+                    font-size: 0.7rem;
                 }
             }
         }
@@ -163,17 +136,17 @@ a {
 }
 
 
-/*mobile-homeMenu-start*/
+/*mobile-homeMenu-end*/
 
 
 /*mobile-contact-start*/
 
 #contact {
     z-index: 1;
-    @include gridCenter;
     width: 100%;
-    row-gap: 5vh;
+    @include gridCenter;
     padding-top: 5vh;
+    row-gap: 5vh;
     #map {
         width: 80%;
         height: 70vw;
@@ -183,9 +156,9 @@ a {
             font-size: 1rem;
         }
         iframe {
-            border-radius: 20px;
             width: 100%;
             height: 100%;
+            border-radius: 20px;
             object-fit: cover;
         }
     }
@@ -193,33 +166,32 @@ a {
 
 #contact-text {
     z-index: 1;
-    position: relative;
-    top: 12px;
-    background: rgba(196, 196, 196, 0.2);
-    padding: 3vh 0;
     width: 100%;
     height: auto;
+    position: relative;
+    top: 12px;
     @include gridCenter;
     grid-template-columns: 1fr 1.2fr;
+    padding: 3vh 0;
+    background: rgba(196, 196, 196, 0.2);
     h2 {
         @include otherFont;
+        margin-left: 9vw;
         color: black;
         text-transform: uppercase;
-        font-size: 4vw;
-        margin-left: 9vw;
+        font-size: 1rem;
     }
     p {
         display: grid;
-        grid-template-columns: 1fr 3fr;
-        justify-self: left;
         a,
         span {
             text-align: justify;
-            text-decoration: none;
             @include otherFont;
+            text-decoration: none;
             color: black;
-            font-size: 3vw;
-            line-height: 5vw;
+            font-size: 0.6rem;
+            line-height: 1rem;
+            letter-spacing: 1px;
         }
         .contact-title {
             justify-self: right;
@@ -232,29 +204,33 @@ a {
 /*mobile-contact-end*/
 
 @import './footer';
+
+/*tablet layout start*/
+
 @media only screen and (min-width: 450px) {
+    .right {
+        width: 80%;
+        @include gridCenter;
+        position: relative;
+        left: 20%;
+    }
+    /*tablet slide start*/
     .mobilePhoto {
         display: none;
     }
     .tablet-body {
         display: block;
     }
-    .right {
-        @include gridCenter;
-        position: relative;
-        width: 80%;
-        left: 20%;
-    }
     .homepagePhoto {
         width: 100%;
         .slideFrame {
-            position: relative;
             width: 100%;
             height: 45vw;
+            position: relative;
             overflow: hidden;
             .photo {
-                position: absolute;
                 width: 100%;
+                position: absolute;
                 top: 0;
                 left: 0;
                 transform: translateX(100%);
@@ -276,67 +252,71 @@ a {
                 &-four {
                     z-index: 7;
                     animation-delay: 15s;
-                    ;
                 }
             }
         }
     }
+    /*tablet slide end*/
     /*tablet-homemenu-start*/
     #homeMenu {
         width: 100%;
         h1 {
-            color: $cardBgColor;
-            @include textShadow(2px);
-            font-size: 2rem;
             margin-left: 5vw;
             margin-bottom: 0;
+            @include textShadow(2px);
+            font-size: 1.5rem;
+            color: $cardBgColor;
         }
         .menu-section {
-            @include gridCenter;
             width: 95%;
+            @include gridCenter;
             grid-template-columns: 1fr 1fr 1fr;
             .foodCard {
-                width: 80%;
-                height: 20vw;
-                display: grid;
+                width: 10rem;
+                height: 12rem;
                 align-items: start;
                 grid-template-columns: 1fr;
-                grid-template-rows: 3fr 1fr;
+                grid-template-rows: 2fr 1fr;
                 row-gap: 0;
                 border-radius: 30px 0;
                 img {
                     width: 100%;
-                    height: 14vw;
+                    height: 100%;
                     border-radius: 30px 0 0 0;
                 }
                 div {
                     position: relative;
                     width: 100%;
-                    height: 4vw;
-                    grid-template-rows: 1fr 1fr;
-                    h2,
+                    height: 4rem;
+                    h2 {
+                        z-index: 10;
+                        height: 0.8rem;
+                        padding: 0 1vw;
+                        font-size: 0.8rem
+                    }
                     h3 {
                         z-index: 10;
-                        padding: 0 1vw;
-                        font-size: $desktopMenuFontSize;
+                        height: 0.7rem;
+                        font-size: 0.7rem;
+                        line-height: 0.7rem;
                     }
                 }
                 &:hover .description {
-                    top: 2vw;
+                    top: 2rem;
                     opacity: 1;
                     transition: all 0.3s ease-out;
                 }
                 .description {
                     z-index: 5;
                     box-sizing: border-box;
-                    height: 10vw;
-                    padding: 4vw 1vw;
-                    position: absolute;
-                    font-size: $desktopMenuFontSize;
-                    background-color: $cardBgColor;
                     width: 100%;
+                    height: fit-content;
+                    padding: 2rem 0.5rem 0 0.5rem;
+                    position: absolute;
                     top: -2vw;
+                    font-size: 0.8rem;
                     border-radius: 0 0 30px 0;
+                    background-color: $cardBgColor;
                     opacity: 0;
                     @include pageShadow(2px);
                 }
@@ -351,63 +331,41 @@ a {
             width: 80%;
             height: 40vh;
             h1 {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
         #contact-text {
+            grid-template-columns: 1fr 1.5fr;
             h2 {
-                margin-left: 0;
-                font-size: 1.2rem;
+                padding-left: 2vw;
             }
             p {
                 a,
                 span {
-                    font-size: 1rem;
-                    line-height: 3vw;
+                    font-size: 0.8rem;
                 }
             }
         }
     }
 }
 
-@media only screen and (min-width: 1367px) {
-    .right {
-        width: 80%;
-        left: 20%;
-    }
-    #homeMenu {
-        .menu-section {
-            width: 90%;
-            grid-template-columns: 1fr 1fr 1fr;
-            .foodCard {
-                width: 70%;
-                height: 14vw;
-                grid-template-rows: 1.5fr 1fr;
-                img {
-                    height: 100%;
-                }
-                div {
-                    margin-top: 1vw;
-                    h2,
-                    h3 {
-                        font-size: 1.2rem;
-                    }
-                    .description {
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-        }
-    }
-    #contact-text {
-        h2 {
-            font-size: 1vw;
-        }
-        p {
-            a,
-            span {
-                font-size: 1vw;
-            }
-        }
+@media only screen and (min-width: 1024px) {
+    html {
+        font-size: 20px;
     }
 }
+
+
+/*tablet-contact-end*/
+
+
+/*desktop layout start*/
+
+@media only screen and (min-width: 1367px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+
+/*desktop layout end*/

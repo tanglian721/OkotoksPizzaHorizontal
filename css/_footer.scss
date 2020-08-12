@@ -13,17 +13,22 @@ footer {
     #footer-top {
         z-index: 31;
         @include gridCenter;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1.3fr;
         padding: 1vw 0 2px 0;
         div {
             text-align: center;
             p,
-            a {
+            a,
+            span {
                 text-decoration: none;
                 @include otherFont;
                 color: black;
-                font-size: 3vw;
-                line-height: 4vw;
+                font-size: 0.6rem;
+                line-height: 1rem;
+                img {
+                    width: 0.8rem;
+                    margin-top: 10px;
+                }
             }
         }
     }
@@ -32,8 +37,8 @@ footer {
         text-decoration: none;
         @include otherFont;
         color: black;
-        font-size: 3vw;
-        line-height: 6vw;
+        font-size: 0.6rem;
+        line-height: 1rem;
     }
 }
 
@@ -43,17 +48,6 @@ footer {
         width: 100%;
         #footer-top {
             width: 100%;
-            div {
-                p,
-                a {
-                    font-size: 1vw;
-                    line-height: 1.5vw;
-                }
-            }
-        }
-        #footer-bottom {
-            font-size: 1vw;
-            line-height: 2vw;
         }
     }
 }
