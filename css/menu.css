@@ -358,7 +358,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   text-transform: uppercase;
   font-size: 1.5rem;
   text-shadow: 1px 1px 1px #383838;
-  line-height: 10vw;
+  line-height: 4vh;
   background-color: #FFA00D;
   border-radius: 0 1.5rem 1.5rem 0;
   -webkit-box-shadow: 0 1px 1px 0 #383838;
@@ -372,19 +372,19 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
 #homeMenu #pizza {
   position: -webkit-sticky;
   position: sticky;
-  top: 24vw;
+  top: 9vh;
 }
 
 #homeMenu #slides {
   position: -webkit-sticky;
   position: sticky;
-  top: 36.3vw;
+  top: 13vh;
 }
 
 #homeMenu #desserts {
   position: -webkit-sticky;
   position: sticky;
-  top: 42vw;
+  top: 17vh;
 }
 
 #homeMenu .menu-section {
