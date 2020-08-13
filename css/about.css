@@ -484,12 +484,15 @@ footer #footer-bottom {
   line-height: 1rem;
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 600px) {
   footer {
+    margin-top: 5vw;
+    z-index: 1;
     border-radius: 0;
     width: 100%;
   }
   footer #footer-top {
+    z-index: 1;
     width: 100%;
   }
 }
