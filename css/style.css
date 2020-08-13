@@ -739,7 +739,7 @@ footer #footer-bottom {
     color: #ffffff;
   }
   #homeMenu .menu-section {
-    width: 95%;
+    width: 90%;
     display: -ms-grid;
     display: grid;
     -webkit-box-align: center;
@@ -771,6 +771,7 @@ footer #footer-bottom {
     border-radius: 30px 0 0 0;
   }
   #homeMenu .menu-section .foodCard div {
+    z-index: 5;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 100%;
@@ -790,25 +791,21 @@ footer #footer-bottom {
             box-shadow: 0 1px 2px 0 #383838;
   }
   #homeMenu .menu-section .foodCard div h2 {
-    z-index: 10;
     height: 1.2rem;
     font-size: 0.8rem;
   }
   #homeMenu .menu-section .foodCard div h3 {
-    z-index: 10;
     height: 3rem;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     line-height: 0.7rem;
   }
   #homeMenu .menu-section .foodCard div .description {
-    z-index: 5;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 100%;
     height: 4rem;
     font-size: 0.8rem;
     border-radius: 0 0 30px 0;
-    opacity: 1;
   }
   #homeMenu .menu-section .foodCard:hover div {
     height: 8rem;
