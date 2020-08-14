@@ -24,6 +24,7 @@ a {
   display: none;
 }
 
+/*mobile header start*/
 .tablet-header {
   display: none;
 }
@@ -300,6 +301,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   background-position-x: 0%;
 }
 
+/*mobile header end*/
 /* mobile menu start*/
 #homeMenu {
   display: -ms-grid;
@@ -478,6 +480,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   font-size: 0.6rem;
 }
 
+/* mobile menu end*/
 /*tablet layout start*/
 @media only screen and (min-width: 600px) {
   .right {
@@ -632,7 +635,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   }
 }
 
-/*tablet-contact-end*/
+/*tablet layout end*/
 /*desktop layout start*/
 @media only screen and (min-width: 1367px) {
   html {

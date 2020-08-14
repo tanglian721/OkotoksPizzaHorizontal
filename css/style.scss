@@ -25,6 +25,9 @@ a {
     display: none;
 }
 
+
+/*mobile header start*/
+
 @import './header';
 #home {
     background-color: $primaryColor;
@@ -40,6 +43,9 @@ a {
         background-position-x: 0%;
     }
 }
+
+
+/*mobile header end*/
 
 
 /*mobile-homepagePhoto-start*/
@@ -63,6 +69,9 @@ a {
         }
     }
 }
+
+
+/*mobile-homepagePhoto-end*/
 
 
 /*mobile-homeMenu-start*/
@@ -353,6 +362,9 @@ a {
     }
 }
 
+
+/*tablet-contact-end*/
+
 @media only screen and (min-width: 1024px) {
     html {
         font-size: 20px;
@@ -360,7 +372,7 @@ a {
 }
 
 
-/*tablet-contact-end*/
+/*tablet-layout-end*/
 
 
 /*desktop layout start*/

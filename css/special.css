@@ -25,7 +25,6 @@ a {
 }
 
 /*mobile header start*/
-/*mobile header end*/
 .tablet-header {
   display: none;
 }
@@ -303,7 +302,8 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
 }
 
 /*mobile header end*/
-.salesPart {
+/*mobile promotion start*/
+.promotion {
   width: 100%;
   height: 60vh;
   display: -ms-grid;
@@ -315,17 +315,17 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   overflow: hidden;
 }
 
-.salesPart .salesPhoto {
+.promotion .salesPhoto {
   width: 80%;
   height: 100%;
   overflow: hidden;
 }
 
-.salesPart .salesPhoto img {
+.promotion .salesPhoto img {
   width: 100%;
 }
 
-.salesPart .salesPhoto p {
+.promotion .salesPhoto p {
   font-size: 1.8rem;
   color: white;
   text-shadow: 2px 5px 5px black;
@@ -337,7 +337,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
           transform: translate(4vw, -15vh) rotatez(-15deg);
 }
 
-.salesPart .salesPhoto a {
+.promotion .salesPhoto a {
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -353,7 +353,8 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
           transform: translate(-50%, -6vh);
 }
 
-/* mobile menu start*/
+/*mobile promotion end*/
+/* mobile sales start*/
 #homeMenu {
   display: -ms-grid;
   display: grid;
@@ -468,7 +469,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   font-size: 0.6rem;
 }
 
-/* mobile menu end*/
+/* mobile sales start*/
 /*tablet layout start*/
 @media only screen and (min-width: 600px) {
   .right {
@@ -482,29 +483,29 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
     width: 80%;
     left: 20%;
   }
-  .salesPart {
+  .promotion {
     width: 100%;
     height: 40vw;
   }
-  .salesPart .salesPhoto {
+  .promotion .salesPhoto {
     width: 100%;
     height: 100%;
     position: relative;
   }
-  .salesPart .salesPhoto img {
+  .promotion .salesPhoto img {
     position: absolute;
     left: 50%;
     top: 10%;
     width: auto;
     height: 80%;
   }
-  .salesPart .salesPhoto p,
-  .salesPart .salesPhoto a {
+  .promotion .salesPhoto p,
+  .promotion .salesPhoto a {
     -webkit-transform: none;
             transform: none;
     left: 0;
   }
-  .salesPart .salesPhoto p {
+  .promotion .salesPhoto p {
     position: absolute;
     color: black;
     text-shadow: 2px 2px 5px #FFA00D;
@@ -514,7 +515,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
     left: 10%;
     top: 30%;
   }
-  .salesPart .salesPhoto a {
+  .promotion .salesPhoto a {
     position: absolute;
     left: 18%;
     top: 60%;
@@ -660,7 +661,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   }
 }
 
-/*tablet-contact-end*/
+/*tablet layout end*/
 /*desktop layout start*/
 @media only screen and (min-width: 1367px) {
   html {
