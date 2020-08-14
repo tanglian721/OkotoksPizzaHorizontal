@@ -122,7 +122,7 @@
                 }
                 div {
                     width: 40vw;
-                    height: 23vw;
+                    height: 6rem;
                     @include gridCenter;
                     overflow: hidden;
                     h2 {
@@ -135,14 +135,13 @@
                         line-height: 0.8rem;
                     }
                     h3 {
-                        height: 0.6rem;
                         justify-self: right;
                         margin: 0 1.3rem;
                         overflow: hidden;
                         @include articleFont;
                         font-size: 0.6rem;
                         text-transform: uppercase;
-                        line-height: 0.6rem;
+                        line-height: 0.7rem;
                         color: $priceColor;
                     }
                     p {

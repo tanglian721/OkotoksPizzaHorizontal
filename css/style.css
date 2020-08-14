@@ -471,7 +471,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
 
 #homeMenu .menu-section .foodCard div {
   width: 40vw;
-  height: 23vw;
+  height: 6rem;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -500,7 +500,7 @@ header .nav-menu-dropdown .nav-menu-dropdown-container {
   font-weight: bold;
   font-size: 0.6rem;
   text-transform: uppercase;
-  line-height: 0.6rem;
+  line-height: 0.7rem;
   color: red;
 }
 
