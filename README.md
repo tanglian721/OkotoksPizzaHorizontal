@@ -1,2 +1,2 @@
 # OkotoksPizzaHorizontal
-OkotoksPizza website with horizontal layout
+www.tangpizza.tk
